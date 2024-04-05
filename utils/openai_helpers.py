@@ -18,7 +18,8 @@ def query_openai_model(prompt, model_name = "gpt4-turbo-0125"):
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": f"{prompt}"}
-        ]
+        ],
+        response_format={"type": "json_object"}
     )
     usage = response.usage
 
