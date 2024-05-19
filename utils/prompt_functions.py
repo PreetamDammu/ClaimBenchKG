@@ -39,3 +39,27 @@ def get_prompt_v2(triplet_text):
     return prompt.replace('    ', '')
 
 # create more variants here for different prompts, testing, ..etc.
+
+def get_prompt_HIT_test(triplet_text):
+    prompt = f'''
+    Triplet format: (subject, relation, object)
+    Use the given triplet and correspoding description provided below to generate two questions:
+    Q1) Whose answer is the object node of the triplet.
+    Q2) Whose answer is not the object node of the triplet, considering the triplet as a fact.
+    
+    Return the two questions, their labels, along with the rationale for each generated question.
+    Valid labels are: "Supported" and "Refuted".
+
+    Structure your response as a JSON object with the following keys:
+    - "Q1": Question whose answer is the object node of the triplet.
+    - "Rationale_Q1": Rationale for Q1.
+    - "Label_Q1": Label for Q1.
+    - "Q2": Question whose answer is NOT the object node of the triplet.
+    - "Rationale_Q2": Rationale for Q2.
+    - "Label_Q2": Label for Q2.
+
+
+    The triplets and corresponding descriptions provided in brackets are as follows:
+    {triplet_text}
+    '''
+    return prompt.replace('    ', '')
