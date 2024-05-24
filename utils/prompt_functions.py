@@ -63,3 +63,17 @@ def get_prompt_HIT_test(triplet_text):
     {triplet_text}
     '''
     return prompt.replace('    ', '')
+
+def get_abstraction_mcq_prompt(question, options):
+    prompt = f'''
+    For the following question, choose all suitable candidates from the provided options that can reasonably asnwer the question:
+    
+    Question: 
+    {question}
+
+    Options:
+    {options}
+    
+    Respond with a JSON object with 'answer' key containing a list of the selected options, or an empty list if no suitable options are present.
+    '''
+    return prompt.replace('    ', '')

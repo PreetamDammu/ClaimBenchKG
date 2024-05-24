@@ -2,3 +2,5 @@ inputs
 outputs
 .env
 utils/__pycache__
+openai_query.log
+wiki_client_logs.txt
