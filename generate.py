@@ -138,7 +138,7 @@ def generate(
     path: List[Tuple[str, ...]],
     properties: List[Tuple[str, ...]],
     client: OpenAI,
-    model: str = "gpt-4-turbo",
+    model: str = "gpt4-turbo-0125",
 ) -> str:
     """Generate a question from a sample.
 
