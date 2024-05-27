@@ -123,7 +123,6 @@ def sample(
         prop_ids.add(outgoing_claims[idx][2])
 
     conn.close()
-    print("returned")
     return path, properties
 
 
@@ -151,7 +150,6 @@ def process_and_write_to_csv(
             with open(output_csv, "w", newline="") as csvfile:
                 csv_writer = csv.writer(csvfile)
                 for future in as_completed(futures):
-                    print("completed")
                     path, props = future.result()
                     out = []
                     for item in path:
@@ -159,7 +157,6 @@ def process_and_write_to_csv(
                     for prop in props:
                         out.append(prop[0])
                     csv_writer.writerow(out)
-                    print("written")
 
 
 if __name__ == "__main__":
