@@ -64,16 +64,40 @@ def get_prompt_HIT_test(triplet_text):
     '''
     return prompt.replace('    ', '')
 
-def get_abstraction_mcq_prompt(question, options):
+def get_abstraction_mcq_prompt(question, answer, options):
     prompt = f'''
-    For the following question, choose all suitable candidates from the provided options that can reasonably asnwer the question:
-    
-    Question: 
+    Given the following question and a valid answer, identify all suitable candidates from the provided options that can also serve as valid answers to the question. Note that there may be multiple correct answers. Only select options that provide a direct answer to the question and adequately satisfy the information sought.
+
+    Question:
     {question}
+
+    Valid Answer:
+    {answer}
 
     Options:
     {options}
-    
-    Respond with a JSON object with 'answer' key containing a list of the selected options, or an empty list if no suitable options are present.
+
+    Respond with a JSON object containing a list of the selected options under the key 'answer'. If no suitable options are present, return an empty list.
     '''
+
+    return prompt.replace('    ', '')
+
+
+def get_abstraction_mcq_prompt_v2(question, answer, options):
+    prompt = f'''
+    Given the following question and a valid answer, identify all suitable candidates from the provided options that can also serve as valid answers to the question. Note that there may be multiple correct answers. 
+    Only select options that provide a specific and informative answer to the question, or closely related concepts, similar in nature to the valid answer provided.
+
+    Question:
+    {question}
+
+    Valid Answer:
+    {answer}
+
+    Options:
+    {options}
+
+    Respond with a JSON object containing a list of the selected options under the key 'answer'. If no suitable options are present, return an empty list.
+    '''
+
     return prompt.replace('    ', '')

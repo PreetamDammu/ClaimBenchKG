@@ -22,7 +22,7 @@ logging.basicConfig(filename='openai_query.log', level=logging.INFO,
 def query_openai_model(prompt, model_name = "gpt4-turbo-0125"):
     response = client.chat.completions.create(
         model=model_name, # model = "deployment_name".
-        temperature = 0.7,
+        temperature = 0.2,
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": f"{prompt}"}
@@ -40,7 +40,7 @@ def query_openai_model_with_retries(prompt, model_name="gpt4-turbo-0125", max_re
         try:
             response = client.chat.completions.create(
                 model=model_name,
-                temperature=0.7,
+                temperature=0.2,
                 messages=[
                     {"role": "system", "content": "You are a helpful assistant."},
                     {"role": "user", "content": f"{prompt}"}

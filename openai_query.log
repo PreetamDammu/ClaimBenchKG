@@ -153,3 +153,562 @@
 2024-05-24 00:12:40,591 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
 2024-05-24 00:12:40,692 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
 2024-05-24 00:12:41,702 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:25:48,777 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:25:48,790 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:25:48,867 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:25:48,892 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:25:53,154 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:25:53,713 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:25:53,736 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:25:56,945 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:25:56,991 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:25:57,929 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:25:57,929 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:25:58,283 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:25:58,630 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:25:58,631 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:26:18,273 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:26:18,311 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:26:38,352 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:26:38,352 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:27:09,634 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:27:09,635 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:27:15,931 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:27:15,931 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:27:22,128 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:27:22,128 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:27:28,547 - ERROR - KeyError in fetching related nodes for properties {'Point in time': 'P585', 'Duration': 'P2047'}: 'id'
+2024-05-24 00:27:31,229 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:27:31,233 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:27:34,716 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:27:34,716 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:27:56,892 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:27:56,892 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:28:02,556 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:28:02,579 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:35:17,344 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:35:17,367 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:35:17,702 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:35:17,727 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:35:21,621 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:35:22,165 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:35:22,167 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:35:26,336 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:35:26,361 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:35:26,438 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:35:27,075 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:35:27,098 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:35:28,061 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:35:28,061 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:35:45,153 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:35:45,178 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:35:45,950 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:35:45,975 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:35:49,907 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:35:49,930 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:35:51,928 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:35:53,068 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:35:53,068 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:35:58,503 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:35:58,504 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:35:59,082 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:35:59,085 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:35:59,820 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:36:05,668 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:36:05,693 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:36:05,752 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:36:05,759 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:36:09,542 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:36:09,543 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:36:09,716 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:36:13,869 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:36:13,915 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:36:14,351 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:36:14,351 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:36:14,665 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:36:26,366 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:36:26,371 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:36:27,020 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:36:27,020 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:36:30,650 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:36:30,749 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:36:30,750 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:36:34,590 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:36:34,590 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:36:34,730 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:36:34,756 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:36:34,779 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:36:35,366 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:36:35,366 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:36:56,473 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:36:56,473 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:37:12,986 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:37:13,011 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:37:13,821 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:37:13,821 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:37:15,790 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:37:15,791 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:37:20,369 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:37:21,379 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:37:21,403 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:37:34,208 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:37:34,216 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:37:34,218 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:37:34,277 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:37:38,409 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:37:38,533 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:37:38,533 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:37:41,932 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:37:41,954 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:37:42,278 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:37:42,643 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:37:42,643 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:37:43,076 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:37:43,099 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:38:02,330 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:38:02,353 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:38:21,011 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:38:21,012 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:38:51,512 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:38:51,512 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:38:56,092 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:38:56,115 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:39:09,454 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:39:09,481 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:39:09,884 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:39:09,947 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:39:13,606 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:39:14,021 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:39:14,044 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:39:17,570 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:39:17,570 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:39:18,103 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:39:18,103 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:39:18,482 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:39:19,307 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:39:19,331 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:39:39,738 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:39:39,738 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:39:57,464 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:39:57,465 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:40:27,443 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:40:27,443 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:40:33,111 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:40:33,111 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:40:40,087 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:40:40,087 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:40:42,171 - ERROR - KeyError in fetching related nodes for properties {'Point in time': 'P585', 'Duration': 'P2047'}: 'id'
+2024-05-24 00:40:47,644 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:40:47,668 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:40:48,117 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:40:48,141 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:41:12,374 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:41:12,397 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:41:19,250 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:41:19,250 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:42:26,038 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:42:26,048 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:42:26,178 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:42:26,178 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:42:30,055 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:42:30,056 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:42:30,211 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:42:34,371 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:42:34,371 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:42:34,529 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:42:34,529 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:42:34,667 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:42:34,978 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:42:34,978 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:42:54,754 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:42:54,754 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:43:20,111 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:43:20,118 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:43:20,296 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:43:20,319 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:45:16,478 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:45:16,501 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:45:16,886 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:45:16,886 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:46:17,096 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:46:17,096 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:46:17,428 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:46:17,434 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:46:21,140 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:46:22,217 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:46:22,264 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:46:24,962 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:46:24,962 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:46:25,605 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:46:26,371 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:46:26,371 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:46:27,738 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:46:27,738 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:46:46,647 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:46:46,649 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:46:58,954 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:46:58,961 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:46:59,035 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:46:59,045 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:47:02,665 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:47:05,342 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:47:05,343 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:47:06,734 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:47:06,735 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:47:07,352 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:47:07,352 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:47:07,402 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 00:47:09,669 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:47:09,669 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:47:27,676 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:47:27,676 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:47:45,876 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:47:45,876 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:48:16,343 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:48:16,344 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:48:23,157 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:48:23,158 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:48:29,075 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:48:29,075 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:48:35,757 - ERROR - KeyError in fetching related nodes for properties {'Point in time': 'P585', 'Duration': 'P2047'}: 'id'
+2024-05-24 00:48:36,957 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:48:36,957 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:48:41,546 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:48:41,569 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:49:02,954 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:49:02,978 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:49:09,623 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 00:49:09,623 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 00:51:45,496 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:45,505 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:46,850 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:47,086 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:49,430 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:50,266 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:50,328 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:51,500 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:52,742 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:53,874 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:54,087 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:54,802 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:57,515 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:58,360 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:58,947 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:59,482 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:51:59,649 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:00,168 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:00,453 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:00,612 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:01,025 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:01,139 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:01,606 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:02,178 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:02,517 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:03,029 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:03,477 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:03,870 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:04,422 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:05,185 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:05,545 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:06,312 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:06,964 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:07,540 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:09,351 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:12,199 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:12,995 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:14,129 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:15,250 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:15,853 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:15,991 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:17,455 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:18,301 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:18,578 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:18,884 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:19,604 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:20,984 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:21,325 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:21,537 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:21,659 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:22,462 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:22,691 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:23,722 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:23,990 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:24,361 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:24,648 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:24,825 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:26,596 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:27,628 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:27,721 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:28,684 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:29,113 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:32,890 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:33,811 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:38,787 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:39,954 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:40,781 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:41,165 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:41,471 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:44,224 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:48,536 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:53,641 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:54,032 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:56,507 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:57,335 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:57,429 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:57,730 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:58,177 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:58,349 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:58,356 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:52:59,107 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:01,787 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:02,299 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:02,779 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:03,122 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:03,357 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:03,729 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:04,704 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:05,520 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:05,988 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:05,994 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:07,278 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:07,516 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:08,505 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:09,452 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:09,482 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:12,894 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:14,797 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:53:24,076 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 00:55:00,831 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:09:33,547 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:09:33,573 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:09:33,772 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:09:33,777 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:09:38,707 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 01:09:39,925 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:09:39,948 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:09:41,917 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:09:41,917 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:09:42,321 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:09:42,323 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:09:42,721 - ERROR - KeyError in fetching related nodes for properties {'Country': 'P17', 'Instance of': 'P31'}: 'datavalue'
+2024-05-24 01:09:44,505 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:09:44,505 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:10:02,524 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:10:02,525 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:10:21,041 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:10:21,044 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:10:52,253 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:10:52,255 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:10:58,626 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:10:58,627 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:11:05,191 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:11:05,193 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:11:13,366 - ERROR - KeyError in fetching related nodes for properties {'Point in time': 'P585', 'Duration': 'P2047'}: 'id'
+2024-05-24 01:11:14,043 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:11:14,043 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:11:19,194 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:11:19,194 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:11:38,044 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:11:38,045 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:11:44,821 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Creative work type': 'P1448'}: 'id'
+2024-05-24 01:11:44,821 - ERROR - KeyError in fetching related nodes for properties {'Instance of': 'P31', 'Demographic group': 'P1448'}: 'id'
+2024-05-24 01:13:47,804 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:48,415 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:48,585 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:49,095 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:49,533 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:49,983 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:50,738 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:50,895 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:51,933 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:52,243 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:52,848 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:53,763 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:53,855 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:55,060 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:55,490 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:56,168 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:56,381 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:57,953 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:57,991 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:59,572 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:59,633 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:13:59,656 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:00,507 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:01,891 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:01,912 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:02,599 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:02,676 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:02,897 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:02,913 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:02,967 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:03,429 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:03,685 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:04,261 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:04,306 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:04,834 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:04,977 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:05,408 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:05,940 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:06,226 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:06,643 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:06,836 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:06,969 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:07,326 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:07,767 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:08,322 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:08,954 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:09,012 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:09,155 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:09,182 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:09,779 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:10,450 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:10,604 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:10,675 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:10,920 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:12,025 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:12,101 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:12,163 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:12,471 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:12,615 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:13,506 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:14,463 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:14,530 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:15,847 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:15,877 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:17,554 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:18,706 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:18,972 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:19,386 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:21,345 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:21,828 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:22,014 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:23,584 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:23,624 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:24,307 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:24,485 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:25,040 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:25,146 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:25,940 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:26,163 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:26,252 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:27,214 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:27,822 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:30,765 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:31,541 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:31,763 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:32,922 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:33,999 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:40,865 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:42,689 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:47,406 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:49,241 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:49,313 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:49,700 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:50,513 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:50,664 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:51,082 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:53,957 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:14:57,345 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:15:12,015 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 01:15:38,541 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:43,965 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:44,343 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:44,404 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:44,881 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:45,816 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:46,160 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:47,420 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:47,548 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:48,326 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:48,561 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:49,229 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:50,667 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:51,730 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:51,811 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:51,996 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:52,589 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:53,471 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:53,661 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:53,955 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:54,675 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:54,748 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:55,100 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:55,747 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:56,861 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:57,332 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:57,528 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:58,273 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:58,286 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:58,368 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:58,717 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:59,401 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:59,668 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:59,911 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:56:59,933 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:01,021 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:01,313 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:01,641 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:02,416 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:03,201 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:04,043 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:04,414 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:04,512 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:04,837 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:05,427 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:05,433 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:05,491 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:06,080 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:06,510 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:06,517 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:06,906 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:07,897 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:07,974 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:08,059 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:08,239 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:08,423 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:09,166 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:09,243 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:09,327 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:10,174 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:10,233 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:11,556 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:11,666 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:12,419 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:12,994 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:13,285 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:13,508 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:14,921 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:15,506 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:16,048 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:17,875 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:19,572 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:20,500 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:22,828 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:22,834 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:23,211 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:23,748 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:23,781 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:24,315 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:24,881 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:26,030 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:26,461 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:27,551 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:27,582 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:27,953 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:28,198 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:29,318 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:29,690 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:30,203 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:31,060 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:31,610 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:32,340 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:32,590 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:33,532 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:34,205 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:34,834 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:35,080 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:37,825 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:46,369 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:57:55,650 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-05-24 02:59:09,810 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
