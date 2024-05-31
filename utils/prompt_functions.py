@@ -1,5 +1,107 @@
 import json
 
+def generate_verification_prompt(question, answer):
+    prompt = f"""
+**Prompt Adequacy Verification Test**
+
+**Objective:** Verify that the question is clear and the answer appropriately addresses it.
+
+**Instructions:**
+
+1. **Evaluate the Question:**
+   - Is the question clear and logical?
+   - Is it unambiguous?
+
+2. **Evaluate the Answer:**
+   - Does it directly address the question?
+   - Is it free from irrelevant information?
+   - Does it provide a complete response?
+
+**Example for Understanding:**
+
+**Example Question:** What is the capital of the administrative territorial entity that Kul Mishan is a part of?
+
+**Expected Answer Characteristics:**
+   - The answer should be the name of a capital city.
+   - It should correctly correspond to the administrative territorial entity that Kul Mishan is a part of.
+
+**Sample Answer Evaluations:**
+   - **"Ardal."** - Suitable, addresses the question, provides relevant information.
+   - **"Tehran."** - Suitable if Tehran is indeed the capital of the entity that Kul Mishan is a part of.
+   - **"Iran."** - Unsuitable, does not specify the capital.
+   - **"Kul Mishan is in Ardal."** - Suitable, but less direct.
+
+**Verification Checklist:**
+- [ ] The question is logical and clear.
+- [ ] The answer directly addresses the question.
+
+**Question and Answer to Evaluate:**
+
+**Question:** {question}
+
+**Answer:** {answer}
+
+**Response Format:**
+Please provide your evaluation in the following JSON format:
+- "question_valid": true/false
+- "answer_relevance": true/false
+- "comments": "Your comments here"
+"""
+    return prompt
+
+
+
+def generate_verification_prompt_old(question, answer):
+    prompt = f"""
+**Prompt Adequacy Verification Test**
+
+**Objective:** Ensure the question is coherent, and the provided answer is a suitable and relevant response that addresses the informational needs of the question.
+
+**Instructions:**
+
+1. **Read the Question:**
+   - Does the question make logical sense?
+   - Is the question clear and unambiguous?
+
+2. **Read the Answer:**
+   - Does the answer directly address the question?
+
+3. **Evaluate the Question and Answer Pair:**
+   - Does the answer fulfill the informational needs implied by the question?
+   - Is the answer free from irrelevant information?
+   - Does the answer provide a complete response to the question?
+
+**Example:**
+
+**Question:** What is the capital of the administrative territorial entity that Kul Mishan is a part of?
+
+**Expected Answer Characteristics:**
+   - The answer should be the name of a capital city.
+   - It should correctly correspond to the administrative territorial entity that Kul Mishan is a part of.
+
+**Sample Answer Evaluations:**
+   - **"Ardal."** - Suitable, addresses the question, provides relevant information.
+   - **"Tehran."** - Suitable if Tehran is indeed the capital of the entity that Kul Mishan is a part of.
+   - **"Iran."** - Unsuitable, does not specify the capital.
+   - **"Kul Mishan is in Ardal."** - Suitable, but less direct.
+
+**Verification Checklist:**
+
+- [ ] The question is logical and clear.
+- [ ] The answer directly addresses the question.
+
+**Question:** {question}
+
+**Answer:** {answer}
+
+**Response Format:**
+Please provide your evaluation in the following JSON format:
+- "question_valid": true/false,
+- "answer_relevance": true/false,
+- "comments": "Your comments here"
+"""
+    return prompt
+
 def get_prompt_v1(triplet_text):
     prompt = f'''
     Use the triplets and their descriptions provided below to generate a coherent paragraph.

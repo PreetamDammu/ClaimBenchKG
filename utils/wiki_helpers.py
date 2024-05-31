@@ -20,6 +20,21 @@ def get_label_for_qid(qid):
         print(f"Error: {str(e)}")
         return None
     
+def get_info_for_qid(qid):
+    try:
+        entity = client.get(qid, load=True)
+        label = str(entity.label)
+        desc = str(entity.description)
+        aliases = entity.attributes.get('aliases', {}).get('en', [])
+
+        # Extract English aliases
+        english_aliases = [alias['value'] for alias in aliases]
+        return label, desc, english_aliases
+
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        return None
+    
 def get_triplet_labels(triplet):
 
     subjQID = triplet[0] 

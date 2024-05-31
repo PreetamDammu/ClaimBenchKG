@@ -55,7 +55,7 @@ def get_labels_and_descriptions_for_triplets(triplets):
     labels_list = []
     descriptions_list = []
     
-    for triplet in tqdm(triplets):
+    for triplet in triplets:
         result = get_triplet_labels(triplet)
         
         if result is not None:
