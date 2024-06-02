@@ -146,17 +146,23 @@ def process_and_write_to_csv(
                 for _ in range(min(batch_size, num_samples - i))
             ]
             futures.extend(batch_futures)
+            print(len(futures))
 
             with open(output_csv, "w", newline="") as csvfile:
                 csv_writer = csv.writer(csvfile)
                 for future in as_completed(futures):
-                    path, props = future.result()
-                    out = []
-                    for item in path:
-                        out.append(item[0])
-                    for prop in props:
-                        out.append(prop[0])
-                    csv_writer.writerow(out)
+                    try:
+                        path, props = future.result()
+                        out = []
+                        for item in path:
+                            out.append(item[0])
+                        for prop in props:
+                            out.append(prop[0])
+                        csv_writer.writerow(out)
+                    except KeyboardInterrupt as e:
+                        raise e
+                    except Exception:
+                        pass
 
 
 if __name__ == "__main__":
