@@ -1,5 +1,66 @@
 import json
 
+def generate_verification_prompt_yaml(question, answer):
+   prompt = f"""
+**Prompt Adequacy Verification Test**
+
+**Objective:** Ensure the question is coherent and the provided answer is suitable and relevant.
+
+**Instructions:**
+
+1. **Read the Question:**
+   - Is the question logical and clear?
+   - Is it unambiguous?
+   - Can it have multiple valid answers?
+
+2. **Read the Answer:**
+   - Does the answer directly address the question?
+
+3. **Evaluate the Question and Answer Pair:**
+   - Does the answer meet the informational needs of the question?
+   - Is it free from irrelevant information?
+
+**Example:**
+
+**Question:** What is the capital of the administrative territorial entity that Kul Mishan is a part of?
+
+**Expected Answer Characteristics:**
+   - The answer should be a capital city.
+   - It should correspond to the entity that Kul Mishan is part of.
+
+**Sample Answer Evaluations:**
+   - **"Ardal."** - Suitable, addresses the question.
+   - **"Tehran."** - Suitable if Tehran is the correct capital.
+   - **"Iran."** - Unsuitable, does not specify a capital city.
+   - **"Kul Mishan is in Ardal."** - Suitable but less direct.
+
+**Sample Multiple Answer Evaluations:**
+   - **"What is the capital city of Washington?"** - Cannot have multiple answers (false).
+   - **"Where did Barack Obama study?"** - Can have multiple answers (true).
+
+**Verification Checklist:**
+
+- [ ] The question is logical and clear.
+- [ ] The answer directly addresses the question and meets its informational needs.
+- [ ] The answer is free from irrelevant information.
+- [ ] The question can/cannot have multiple valid answers.
+
+**Response Format:**
+Provide your evaluation in the following YAML format with fields:
+- "question_valid": true/false
+- "answer_relevance": true/false
+- "multiple_answers_possible": true/false
+- "comments": "Your comments here"
+
+**Question and Answer to Evaluate:**
+
+**Question:** {question}
+
+**Answer:** {answer}
+
+"""
+   return prompt
+
 def generate_verification_prompt(question, answer):
    prompt = f"""
 **Prompt Adequacy Verification Test**
@@ -29,14 +90,14 @@ def generate_verification_prompt(question, answer):
    - It should correspond to the entity that Kul Mishan is part of.
 
 **Sample Answer Evaluations:**
-   - **"Ardal."** – Suitable, addresses the question.
-   - **"Tehran."** – Suitable if Tehran is the correct capital.
-   - **"Iran."** – Unsuitable, does not specify a capital city.
-   - **"Kul Mishan is in Ardal."** – Suitable but less direct.
+   - **"Ardal."** - Suitable, addresses the question.
+   - **"Tehran."** - Suitable if Tehran is the correct capital.
+   - **"Iran."** - Unsuitable, does not specify a capital city.
+   - **"Kul Mishan is in Ardal."** - Suitable but less direct.
 
 **Sample Multiple Answer Evaluations:**
-   - **"What is the capital city of Washington?"** – Cannot have multiple answers (false).
-   - **"Where did Barack Obama study?"** – Can have multiple answers (true).
+   - **"What is the capital city of Washington?"** - Cannot have multiple answers (false).
+   - **"Where did Barack Obama study?"** - Can have multiple answers (true).
 
 **Verification Checklist:**
 

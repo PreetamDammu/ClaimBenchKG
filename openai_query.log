@@ -2791,3 +2791,4 @@
 2024-06-01 00:55:13,243 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
 2024-06-01 00:55:13,967 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
 2024-06-01 00:55:18,854 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
+2024-06-02 22:04:02,059 - INFO - HTTP Request: POST https://preetam.openai.azure.com//openai/deployments/gpt4-turbo-0125/chat/completions?api-version=2024-02-15-preview "HTTP/1.1 200 OK"
