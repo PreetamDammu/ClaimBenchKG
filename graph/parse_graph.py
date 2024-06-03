@@ -27,7 +27,7 @@ def main(args):
 
     # get names and descriptions
     print('getting names and descriptions')
-    data = {}
+    aliases = {}
     with open(args.parsed_dump, 'r') as f:
         for i, line in enumerate(f):
             splits = line.split('>')
@@ -35,9 +35,9 @@ def main(args):
             field = splits[1][20:]
             value = splits[-1][2:-7].encode('utf-8').decode('unicode_escape')
             if key in elements:
-                props = data.get(key, {})
+                props = aliases.get(key, {})
                 props[field] = value
-                data[key] = props
+                aliases[key] = props
             if (i+1) % args.print_every == 0:
                 print(f'{((i+1) / 1000000):.1f}M lines parsed')
     
@@ -45,7 +45,7 @@ def main(args):
     bad_edges = set()
     removed = 0
     for e in elements:
-        if e not in data:
+        if e not in aliases:
             if e[0] == 'P':
                 bad_edges.add(e)
             elif e[0] == 'Q':
@@ -68,7 +68,7 @@ def main(args):
     # save the graph and aliases!
     print('saving data!')
     with open(args.out_file, "wb") as f:
-        pickle.dump((G, data), f)
+        pickle.dump((G, aliases), f)
 
 
 if __name__ == "__main__":
