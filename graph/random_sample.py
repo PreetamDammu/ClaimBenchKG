@@ -95,14 +95,25 @@ def sample(
 
 
 def main(args):
+    print('loading pickle')
     with open(args.pickle, "rb") as f:
         G, _ = pickle.load(f)
 
+    bad_props = set(args.bad_props.split(' '))
+    bad_items = set(args.bad_items.split(' '))
+
+    print('starting sampling')
     with open(args.out_file, "w") as f:
         writer = csv.writer(f)
         for i in range(args.n_samples):
             try:
-                items, relations = sample(G, 3, 0.3)
+                items, relations = sample(
+                    G,
+                    3,
+                    0.3,
+                    bad_props,
+                    bad_items,
+                )
                 writer.writerow(items + relations)
                 if args.print_every > 0 and (i + 1) % args.print_every == 0:
                     print(f"iteration: {i+1}")
