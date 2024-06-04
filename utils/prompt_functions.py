@@ -1,67 +1,150 @@
 import json
 
-def generate_verification_prompt_yaml(question, answer):
-   prompt = f"""
-**Prompt Adequacy Verification Test**
+# def generate_verification_prompt_yaml(question, answer):
+#    prompt = f"""
+# **Prompt Adequacy Verification Test**
 
-**Objective:** Ensure the question is coherent and the provided answer is suitable and relevant.
+# **Objective:** Ensure the question is coherent and the provided answer is suitable and relevant.
+
+# **Instructions:**
+
+# 1. **Read the Question:**
+#    - Is the question logical and clear?
+#    - Is it unambiguous?
+#    - Can it have multiple valid answers?
+
+# 2. **Read the Answer:**
+#    - Does the answer directly address the question?
+
+# 3. **Evaluate the Question and Answer Pair:**
+#    - Does the answer meet the informational needs of the question?
+#    - Is it free from irrelevant information?
+
+# **Example:**
+
+# **Question:** What is the capital of the administrative territorial entity that Kul Mishan is a part of?
+
+# **Expected Answer Characteristics:**
+#    - The answer should be a capital city.
+#    - It should correspond to the entity that Kul Mishan is part of.
+
+# **Sample Answer Evaluations:**
+#    - **"Ardal."** - Suitable, addresses the question.
+#    - **"Tehran."** - Suitable if Tehran is the correct capital.
+#    - **"Iran."** - Unsuitable, does not specify a capital city.
+#    - **"Kul Mishan is in Ardal."** - Suitable but less direct.
+
+# **Sample Multiple Answer Evaluations:**
+#    - **"What is the capital city of Washington?"** - Cannot have multiple answers (false).
+#    - **"Where did Barack Obama study?"** - Can have multiple answers (true).
+
+# **Verification Checklist:**
+
+# - [ ] The question is logical and clear.
+# - [ ] The answer directly addresses the question and meets its informational needs.
+# - [ ] The answer is free from irrelevant information.
+# - [ ] The question can/cannot have multiple valid answers.
+
+# **Response Format:**
+# Provide your evaluation in the following YAML format with fields:
+# - "question_valid": true/false
+# - "answer_relevance": true/false
+# - "multiple_answers_possible": true/false
+# - "comments": "Your comments here"
+
+# **Question and Answer to Evaluate:**
+
+# **Question:** {question}
+
+# **Answer:** {answer}
+
+# """
+#    return prompt
+
+
+def generate_selection_prompt(question, valid_answer, options):
+    prompt = f"""
+**Prompt Validation and Selection Task**
+
+**Objective:** Identify all suitable options from the provided list that can serve as valid answers to the given question. Ensure that each selected option directly addresses the question and meets the informational needs.
 
 **Instructions:**
 
 1. **Read the Question:**
-   - Is the question logical and clear?
-   - Is it unambiguous?
-   - Can it have multiple valid answers?
+   - Understand the information being sought by the question.
 
-2. **Read the Answer:**
-   - Does the answer directly address the question?
+2. **Read the Valid Answer:**
+   - Understand the nature of the answer that directly addresses the question and meets its informational needs.
 
-3. **Evaluate the Question and Answer Pair:**
-   - Does the answer meet the informational needs of the question?
-   - Is it free from irrelevant information?
+3. **Evaluate the Options:**
+   - Select all options that are direct and appropriate answers to the question.
+   - Avoid options that are irrelevant or do not adequately satisfy the question.
 
-**Example:**
+**Example 1:**
 
-**Question:** What is the capital of the administrative territorial entity that Kul Mishan is a part of?
+**Question:** What is the occupation of the founder of the university that John Guillim attended?
 
-**Expected Answer Characteristics:**
-   - The answer should be a capital city.
-   - It should correspond to the entity that Kul Mishan is part of.
+**Valid Answer:** priest
 
-**Sample Answer Evaluations:**
-   - **"Ardal."** - Suitable, addresses the question.
-   - **"Tehran."** - Suitable if Tehran is the correct capital.
-   - **"Iran."** - Unsuitable, does not specify a capital city.
-   - **"Kul Mishan is in Ardal."** - Suitable but less direct.
+**Options to Evaluate:**
+   - religious occupation
+   - cleric
+   - rabbi
+   - priestess
+   - Catholic priest
 
-**Sample Multiple Answer Evaluations:**
-   - **"What is the capital city of Washington?"** - Cannot have multiple answers (false).
-   - **"Where did Barack Obama study?"** - Can have multiple answers (true).
+**Sample Evaluations:**
+   - **"religious occupation."** - Unsuitable, vague and not specific.
+   - **"cleric."** - Suitable, addresses the question.
+   - **"rabbi."** - Suitable if it matches the occupation in context.
+   - **"priestess."** - Unsuitable, does not match the valid answer's gender implication.
+   - **"Catholic priest."** - Suitable, a specific type of priest.
+
+**Example 2:**
+
+**Question:** What is the location of the headquarters of the regulatory authority of the sport that Kai Gehring plays?
+
+**Valid Answer:** Zürich
+
+**Options to Evaluate:**
+   - Zürich District
+   - Greater Zurich Area
+   - Zurich metropolitan area
+   - RZU
+   - Zurich
+   - city of Switzerland
+   - District 2
+
+**Sample Evaluations:**
+   - **"Zürich District."** - Suitable, addresses the question.
+   - **"Greater Zurich Area."** - Suitable, addresses the question.
+   - **"Zurich metropolitan area."** - Suitable, addresses the question.
+   - **"RZU."** - Unsuitable, not specific.
+   - **"Zurich."** - Suitable, directly addresses the question.
+   - **"city of Switzerland."** - Unsuitable, not specific.
+   - **"District 2."** - Unsuitable, not specific.
 
 **Verification Checklist:**
 
-- [ ] The question is logical and clear.
-- [ ] The answer directly addresses the question and meets its informational needs.
-- [ ] The answer is free from irrelevant information.
-- [ ] The question can/cannot have multiple valid answers.
+- [ ] The valid answer directly addresses the question and meets its informational needs.
+- [ ] Selected options are direct and relevant answers.
+- [ ] Irrelevant options are excluded.
 
-**Response Format:**
-Provide your evaluation in the following YAML format with fields:
-- "question_valid": true/false
-- "answer_relevance": true/false
-- "multiple_answers_possible": true/false
-- "comments": "Your comments here"
-
-**Question and Answer to Evaluate:**
+**Question and Valid Answer:**
 
 **Question:** {question}
 
-**Answer:** {answer}
+**Answer:** {valid_answer}
 
+**Other Options to Select From:** {options}
+
+**Response Format:**
+Please provide your evaluation in the JSON format with the field:
+- "answers": [list of selected options]
 """
-   return prompt
+    return prompt
 
-def generate_verification_prompt(question, answer):
+def generate_verification_prompt_v1(question, answer):
    prompt = f"""
 **Prompt Adequacy Verification Test**
 
@@ -122,6 +205,66 @@ Provide your evaluation in the following JSON format:
 """
    return prompt
 
+
+def generate_selection_prompt(question, valid_answer, options):
+    prompt = f"""
+**Prompt Validation and Selection Task**
+
+**Objective:** Identify all suitable options from the provided list that can serve as valid answers to the given question. Ensure that each selected option directly addresses the question and meets the informational needs.
+
+**Instructions:**
+
+1. **Read the Question:**
+   - Understand the information being sought by the question.
+
+2. **Read the Valid Answer:**
+   - Understand the nature of the answer that directly addresses the question and meets its informational needs.
+
+3. **Evaluate the Options:**
+   - Select all options that are direct and appropriate answers to the question.
+   - Avoid options that are irrelevant or do not adequately satisfy the question.
+
+**Example:**
+
+**Question:** What is the occupation of the founder of the university that John Guillim attended?
+
+**Valid Answer:** priest
+
+**Options to Evaluate:**
+   - religious occupation
+   - cleric
+   - rabbi
+   - priestess
+   - Catholic priest
+
+**Sample Evaluations:**
+   - **"religious occupation."** - Unsuitable, vague and not specific.
+   - **"cleric."** - Suitable, addresses the question.
+   - **"rabbi."** - Suitable if it matches the occupation in context.
+   - **"priestess."** - Unsuitable, does not match the valid answer's gender implication.
+   - **"Catholic priest."** - Suitable, a specific type of priest.
+
+**Verification Checklist:**
+
+- [ ] The valid answer directly addresses the question and meets its informational needs.
+- [ ] Selected options are direct and relevant answers.
+- [ ] Irrelevant options are excluded.
+
+**Question and Valid Answer:**
+
+**Question:** {question}
+
+**Answer:** {valid_answer}
+
+**Other Options to Select From:** {options}
+
+**Response Format:**
+Provide only your evaluation in the following JSON format:
+- "answers": [list of selected options]
+"""
+    return prompt
+
+
 def generate_verification_prompt_v1(question, answer):
     prompt = f"""
 **Prompt Adequacy Verification Test**
@@ -164,12 +307,15 @@ def generate_verification_prompt_v1(question, answer):
 **Answer:** {answer}
 
 **Response Format:**
-Please provide your evaluation in the following JSON format:
+Provide your evaluation in the following JSON format:
 - "question_valid": true/false
 - "answer_relevance": true/false
 - "comments": "Your comments here"
 """
     return prompt
+
+
+
 
 
 
