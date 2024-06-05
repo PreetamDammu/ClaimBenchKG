@@ -4,6 +4,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import logging
 import time
 from tqdm import tqdm
+import numpy as np
 
 secrets = dotenv_values(".env")
 personal_api_key = secrets['AZURE_OPENAI_KEY']
@@ -16,8 +17,16 @@ client = AzureOpenAI(
 )
 
 
-logging.basicConfig(filename='openai_query.log', level=logging.INFO, 
+logging.basicConfig(filename='openai_logger.log', level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
+
+# logging.basicConfig(filename='openai_logger.log', level=logging.ERROR, 
+#                     format='%(asctime)s - %(levelname)s - %(message)s')
+# Create a logger object
+logger = logging.getLogger(__name__)
+# Function to log specific messages
+def log_message(message):
+    logger.log(logging.INFO, message)
 
 def query_openai_model(prompt, model_name = "gpt4-turbo-0125"):
     response = client.chat.completions.create(
@@ -62,7 +71,7 @@ def query_openai_model_with_retries(prompt, model_name="gpt4-turbo-0125", max_re
 def query_openai_model_batch(prompts, model_name="gpt4-turbo-0125", max_workers=5):
     results = {}
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = {executor.submit(query_openai_model, prompt, model_name): i for i, prompt in enumerate(prompts)}
+        futures = {executor.submit(query_openai_model_with_retries, prompt, model_name): i for i, prompt in enumerate(prompts)}
         for future in tqdm(as_completed(futures), total=len(futures), desc="Processing prompts"):
             idx = futures[future]
             try:
@@ -71,4 +80,29 @@ def query_openai_model_batch(prompts, model_name="gpt4-turbo-0125", max_workers=
             except Exception as e:
                 logging.error(f"Error processing a future for prompt index {idx}: {e}")
                 results[idx] = (None, None)
+    return results
+
+def query_openai_model_batch_save(prompts, model_name="gpt4-turbo-0125", max_workers=5, save_interval=500, save_path="outputs/results_temp"):
+    results = {}
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {executor.submit(query_openai_model_with_retries, prompt, model_name): i for i, prompt in enumerate(prompts)}
+        for i, future in enumerate(tqdm(as_completed(futures), total=len(futures), desc="Processing prompts")):
+            idx = futures[future]
+            try:
+                result = future.result()
+                results[idx] = result
+            except Exception as e:
+                logging.error(f"Error processing a future for prompt index {idx}: {e}")
+                log_message(f"Error processing a future for prompt index {idx}: {e}")
+                results[idx] = (None, None)
+                
+            # Save the results every 'save_interval' iterations
+            if (i + 1) % save_interval == 0:
+                print('Saving intermediate results')
+                log_message('Saving intermediate results')
+                np.save(f'{save_path}', results)
+                
+    # Save final results
+    np.save(f'{save_path}'+'_final', results)
+    
     return results

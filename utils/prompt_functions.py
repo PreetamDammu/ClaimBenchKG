@@ -265,54 +265,54 @@ Provide only your evaluation in the following JSON format:
     return prompt
 
 
-def generate_verification_prompt_v1(question, answer):
-    prompt = f"""
-**Prompt Adequacy Verification Test**
+# def generate_verification_prompt_v1(question, answer):
+#     prompt = f"""
+# **Prompt Adequacy Verification Test**
 
-**Objective:** Verify that the question is clear and the answer appropriately addresses it.
+# **Objective:** Verify that the question is clear and the answer appropriately addresses it.
 
-**Instructions:**
+# **Instructions:**
 
-1. **Evaluate the Question:**
-   - Is the question clear and logical?
-   - Is it unambiguous?
+# 1. **Evaluate the Question:**
+#    - Is the question clear and logical?
+#    - Is it unambiguous?
 
-2. **Evaluate the Answer:**
-   - Does it directly address the question?
-   - Is it free from irrelevant information?
-   - Does it provide a complete response?
+# 2. **Evaluate the Answer:**
+#    - Does it directly address the question?
+#    - Is it free from irrelevant information?
+#    - Does it provide a complete response?
 
-**Example for Understanding:**
+# **Example for Understanding:**
 
-**Example Question:** What is the capital of the administrative territorial entity that Kul Mishan is a part of?
+# **Example Question:** What is the capital of the administrative territorial entity that Kul Mishan is a part of?
 
-**Expected Answer Characteristics:**
-   - The answer should be the name of a capital city.
-   - It should correctly correspond to the administrative territorial entity that Kul Mishan is a part of.
+# **Expected Answer Characteristics:**
+#    - The answer should be the name of a capital city.
+#    - It should correctly correspond to the administrative territorial entity that Kul Mishan is a part of.
 
-**Sample Answer Evaluations:**
-   - **"Ardal."** - Suitable, addresses the question, provides relevant information.
-   - **"Tehran."** - Suitable if Tehran is indeed the capital of the entity that Kul Mishan is a part of.
-   - **"Iran."** - Unsuitable, does not specify the capital.
-   - **"Kul Mishan is in Ardal."** - Suitable, but less direct.
+# **Sample Answer Evaluations:**
+#    - **"Ardal."** - Suitable, addresses the question, provides relevant information.
+#    - **"Tehran."** - Suitable if Tehran is indeed the capital of the entity that Kul Mishan is a part of.
+#    - **"Iran."** - Unsuitable, does not specify the capital.
+#    - **"Kul Mishan is in Ardal."** - Suitable, but less direct.
 
-**Verification Checklist:**
-- [ ] The question is logical and clear.
-- [ ] The answer directly addresses the question.
+# **Verification Checklist:**
+# - [ ] The question is logical and clear.
+# - [ ] The answer directly addresses the question.
 
-**Question and Answer to Evaluate:**
+# **Question and Answer to Evaluate:**
 
-**Question:** {question}
+# **Question:** {question}
 
-**Answer:** {answer}
+# **Answer:** {answer}
 
-**Response Format:**
-Provide your evaluation in the following JSON format:
-- "question_valid": true/false
-- "answer_relevance": true/false
-- "comments": "Your comments here"
-"""
-    return prompt
+# **Response Format:**
+# Provide your evaluation in the following JSON format:
+# - "question_valid": true/false
+# - "answer_relevance": true/false
+# - "comments": "Your comments here"
+# """
+#     return prompt
 
 
 
