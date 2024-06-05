@@ -3,6 +3,22 @@ import json
 import os
 from dotenv import dotenv_values
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from tqdm import tqdm
+import numpy as np
+
+import time
+import logging
+
+logging.basicConfig(filename='azure_endpoint_logger.log', level=logging.INFO, 
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Create a logger object
+logger = logging.getLogger(__name__)
+# Function to log specific messages
+def log_message(message):
+    logger.log(logging.INFO, message)
+
 secrets = dotenv_values(".env")
 mistral_api_key = secrets['AZURE_MISTRAL_KEY']
 mistral_endpoint = secrets['AZURE_MISTRAL_ENDPOINT']
@@ -74,11 +90,12 @@ def create_query_json(prompt, model, temperature=0.2,  max_new_tokens=512):
         
     return data
 
-def query_endpoint(data, model):       
+def query_endpoint(prompt, model, temperature=0.2,  max_new_tokens=512):       
 
+    data = create_query_json(prompt, model, temperature, max_new_tokens)
     body = str.encode(json.dumps(data))
     
-    # print(model)
+    # print(data)
     
     if model == 'mistral':
         url = mistral_endpoint
@@ -102,15 +119,52 @@ def query_endpoint(data, model):
 
     req = urllib.request.Request(url, body, headers)
 
-    try:
-        response = urllib.request.urlopen(req)
+    response = urllib.request.urlopen(req)
 
-        result = response.read()
-        # print(result)
-        return result
-    except urllib.error.HTTPError as error:
-        print("The request failed with status code: " + str(error.code))
+    result = response.read()
 
-        # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
-        print(error.info())
-        print(error.read().decode("utf8", 'ignore'))
+    return result
+
+
+def query_endpoint_with_retries(prompt, model, temperature=0.2, max_new_tokens=512, max_retries=10):
+    retry_count = 0
+    wait_time = 1  # Start with 1 second wait time
+
+    while retry_count < max_retries:
+        try:
+            return query_endpoint(prompt, model, temperature, max_new_tokens)
+        except Exception as e:
+            retry_count += 1
+            if retry_count >= max_retries:
+                logging.error(f"Failed after {max_retries} retries: {e}")
+                return None
+            logging.info(f"Error occurred. Retrying in {wait_time} seconds... (Retry {retry_count}/{max_retries})")
+            time.sleep(wait_time)
+            wait_time *= 2  # Exponential backoff
+
+    return None
+
+def query_endpoint_batch_save(prompts, model, max_workers=5, save_interval=500, save_path="outputs/results_temp"):
+    results = {}
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = {executor.submit(query_endpoint_with_retries, prompt, model): i for i, prompt in enumerate(prompts)}
+        for i, future in enumerate(tqdm(as_completed(futures), total=len(futures), desc="Processing prompts")):
+            idx = futures[future]
+            try:
+                result = future.result()
+                results[idx] = result
+            except Exception as e:
+                logging.error(f"Error processing a future for prompt index {idx} - {model}: {e}")
+                log_message(f"Error processing a future for prompt index {idx} - {model}: {e}")
+                results[idx] = None
+            
+            # Save the results every 'save_interval' iterations
+            if (i + 1) % save_interval == 0:
+                logging.info(f'Saving intermediate results - {model}, iteration {i+1}')
+                log_message(f'Saving intermediate results - {model}, iteration {i+1}')
+                np.save(f'{save_path}', results)
+                
+    # Save final results
+    np.save(f'{save_path}'+'_final', results)
+    
+    return results
