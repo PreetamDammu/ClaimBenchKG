@@ -6,3 +6,4 @@ openai_query.log
 openai_logger.log
 azure_endpoint_logger.log
 wiki_client_logs.txt
+logs

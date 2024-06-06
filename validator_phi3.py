@@ -9,7 +9,7 @@ from tqdm import tqdm
 
 model_name = 'phi3'
 
-fname = '26K_3_hop'
+fname = '20K_2_hop'
 df = pd.read_csv(f'/home/azureuser/cloudfiles/code/Users/preetams/dump/{fname}.csv')
 
 prompts_dict = {}

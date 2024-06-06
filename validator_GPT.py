@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 
 from utils.openai_helpers import query_openai_model_batch_save
-fname = '20K_2_hop'
+fname = '30K_1_hop'
 model_name = 'gpt-4o'
 
 df = pd.read_csv(f'/home/azureuser/cloudfiles/code/Users/preetams/dump/{fname}.csv')
