@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 
 def plot_triplets_graph(triplets):
     """
+    A function to plot a graph of triplets where each triplet consists of (source, relation, target)
+
     Parameters:
     - triplets: A list of triplets where each triplet consists of (source, relation, target)
     """
