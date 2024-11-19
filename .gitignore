@@ -6,3 +6,5 @@ inputs
 *.db
 *.ttl
 *.ntx
+
+yago/db/dump
