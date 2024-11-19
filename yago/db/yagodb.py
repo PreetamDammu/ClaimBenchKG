@@ -31,8 +31,7 @@ class YagoDB:
         self._curr.execute('''
             CREATE TABLE properties (
                 property_id TEXT PRIMARY KEY,
-                property_label TEXT,
-                property_description TEXT
+                property_label TEXT
             )
         ''')
         self._curr.execute('''
@@ -60,16 +59,34 @@ class YagoDB:
         row = self._curr.fetchone()
         return Item(*row)
     
-    def insert_item(self, item: Item) -> None:
+    def insert_item(self, item: Item) -> int:
         """Insert an item into the database.
 
         Args:
         - item: `Item` to be inserted
         """
         self._curr.execute('''
-            INSERT INTO items VALUES (?, ?, ?)
+            INSERT OR IGNORE INTO items VALUES (?, ?, ?)
+                           RETURNING item_id
         ''', (item.item_id, item.item_label, item.item_description))
+        id = self._curr.fetchone()[0]
         self._conn.commit()
+        return id
+    
+    def insert_items(self, items: List[Item]) -> None:
+        """Insert multiple items into the database.
+        Used for efficient inserts with executemany
+
+        Args:
+        - items: List of `Item` to be inserted
+        """
+        self._curr.executemany('''
+            INSERT OR IGNORE INTO items VALUES (?, ?, ?)
+        ''', [(item.item_id, item.item_label, item.item_description) for item in items])
+        rows_inserted = self._curr.rowcount
+        self._conn.commit()
+        return rows_inserted
+
     
     def get_property(self, property_id: str) -> Property:
         """Get a property from the database.
@@ -144,3 +161,14 @@ class YagoDB:
         """Close the connection to the database."""
         self._curr.close()
         self._conn.close()
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--db', type=str, default=DB_NAME)
+    args = parser.parse_args()
+    db = YagoDB(args.db)
+    db.create_db()
+    db.close()
+
+if __name__ == '__main__':
+    main()
