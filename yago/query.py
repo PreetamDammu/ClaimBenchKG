@@ -46,9 +46,8 @@ def query_random_entity(yago_db: YagoDB) -> str:
     - The ID of a random entity
     """
     query = """
-    SELECT item_id FROM items LIMIT 1
+    SELECT item_id FROM items ORDER BY RANDOM() LIMIT 1
     """
-    # SELECT item_id FROM items ORDER BY RANDOM() LIMIT 1
     results = yago_db.query(query)
     return results[0][0]
 
@@ -68,12 +67,6 @@ def query_triple(yago_endpoint_url: str, subject: str, *,
         "Accept": "application/sparql-results+json",
     }
 
-    # Check if the subject has a prefix or is a full URI
-    if not (subject.startswith("<") and subject.endswith(">")):
-        subject_list = subject.split(":")
-        if len(subject_list) == 2:
-            subject = f"<{PREFIXES[subject_list[0]]}{subject_list[1]}>"
-
     query = f"""
     SELECT ?predicate ?object WHERE {{
         {subject} ?predicate ?object
@@ -84,11 +77,16 @@ def query_triple(yago_endpoint_url: str, subject: str, *,
     response = requests.post(yago_endpoint_url, headers=headers, data=query)
     if response.status_code == 200:
         response_json = response.json()  # Prints the JSON result
-        for result_bindings in response_json["results"]["bindings"]:
-            print(result_bindings)
+        # Randomly select a triple
+        if len(response_json["results"]["bindings"]) == 0:
+            return None
+        triple = random.choice(response_json["results"]["bindings"])
+        # triple = response_json["results"]["bindings"][0]
+        return triple
     else:
         print(f"Error: {response.status_code}")
         print(response.text)
+        return None
 
 def random_walk(self, depth: int = 3) -> List[str]:
     """Random walk on the YAGO knowledge graph.
@@ -100,12 +98,22 @@ def random_walk(self, depth: int = 3) -> List[str]:
     - A list of node IDs visited during the walk
     """
     random_entity = query_random_entity(yago_db)
+
+    subject = "yago:Siku_Dalam_Seribu" # random_entity
+    if not (random_entity.startswith("<") and random_entity.endswith(">")):
+        subject_list = random_entity.split(":")
+        if len(subject_list) == 2 and subject_list[0] in PREFIXES:
+            subject = f"{PREFIXES[subject_list[0]]}{subject_list[1]}"
+        else:
+            subject = f"{subject}"
+
+    walk = [subject]
     for _ in range(depth):
-        claims = self.claims_from_subject(walk[-1])
-        if not claims:
+        triple = query_triple(YAGO_ENDPOINT_URL, f"<{walk[-1]}>")
+        if triple is None:
             break
-        claim = random.choice(list(claims))
-        walk.append(claim.target_id)
+        walk.append(triple["predicate"]["value"])
+        walk.append(triple["object"]["value"])
     return walk
 
 if __name__ == "__main__":
@@ -113,4 +121,7 @@ if __name__ == "__main__":
     random_entity = query_random_entity(yago_db)
     print(random_entity)
 
-    query_triple(YAGO_ENDPOINT_URL, random_entity)
+    # query_triple(YAGO_ENDPOINT_URL, random_entity)
+
+    walk = random_walk(yago_db)
+    print(walk)
