@@ -62,25 +62,29 @@ def check_triple(entities: List[str]) -> bool:
         return False
     return True
 
-def insert_entity(entities: Tuple[str, str, str], db: YagoDB) -> None:
+def insert_entities(entities: List[Tuple[str, str, str]], db: YagoDB) -> int:
     """
-    Insert an entity into the database.
+    Insert the entities into the database.
 
     Parameters:
     ----------
-    entities: Tuple[str, str, str]
+    entities: List[Tuple[str, str, str]]
         The entities to be inserted.
+
     db: YagoDB
         The database object.
+
+    Returns:
+    --------
+    int
+        The number of entities inserted.
     """
-    item_id = entities[0]
-    item_label = None #entities[1]
-    item_description = None #entities[2]
-    item = Item(item_id, item_label, item_description)
+    items = [Item(*entity) for entity in entities]
     try:
-        return db.insert_item(item)
+        return db.insert_items(items)
     except Exception as e:
-        if error_file: error_file.write(f'Error with item {item}: {e}\n')
+        # error_file.write(f'Error inserting items:\n')
+        return 0
 
 def read_ttl_line(line: str) -> Tuple[str, str, str]:
     """
@@ -110,6 +114,7 @@ def read_ttl_line(line: str) -> Tuple[str, str, str]:
 def read_ttl_file(ttl_path: str, db: YagoDB, batch_length: int) -> None:
     """
     Read the file in chunks and insert the entities into the database.
+    Insert the entities in batches of `batch_length`.
 
     Parameters:
     ----------
@@ -127,19 +132,30 @@ def read_ttl_file(ttl_path: str, db: YagoDB, batch_length: int) -> None:
     TOTAL = 10
 
     count = 0
+    entities_set = set()
     with open(ttl_path, 'r') as f:
         for line in tqdm(f):
             entities = read_ttl_line(line)
             if not entities:
                 continue
-            res = insert_entity(entities, db)
-            if not res:
-                continue
-            count += 1
-            if count % batch_length == 0:
+            
+            entities_set.add(entities[0])
+            if len(entities_set) == batch_length:
+                entities_list = list([entity, None, None] for entity in entities_set)
+
+                res = insert_entities(entities_list, db)
+                entities_set = set()
+                count += res if res else 0
                 print(f'Inserted {batch_length} entities. Total: {count}')
+            
             # if count == TOTAL:
             #     return
+        
+        if entities_set:
+            entities_list = list([entity, None, None] for entity in entities_set)
+            res = insert_entities(entities_list, db)
+            count += res if res else 0
+            
         print(f'Inserted {count} entities.')
 
 def main(ttl_path: str, db_name: str, batch_length: int) -> None:

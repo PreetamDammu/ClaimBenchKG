@@ -12,10 +12,20 @@ def create_db(connection):
     cursor.close()
     return result
 
+def query_db(connection, query):
+    cursor = connection.cursor()
+    cursor.execute(query)
+    result = cursor.fetchall()
+    cursor.close()
+    return result
+
 def main(args):
     connection = sqlite3.connect(args.database)
-    res = create_db(connection)
-    print(f"SQLite Version: {res}")
+    # res = create_db(connection)
+    # query = "select count(item_id) from items;"
+    query = "select * from items limit 10;"
+    res = query_db(connection, query)
+    print(res)
 
 
 if __name__ == "__main__":
