@@ -4,8 +4,8 @@ from abc import ABC
 import sqlite3
 import argparse
 
-from classes import Item, Property, Claim
-from constants.main import DB_NAME
+from .classes import Item, Property, Claim
+from .constants.main import DB_NAME
 
 class YagoDB:
     """Class for interacting with a Yago DB.
@@ -161,6 +161,18 @@ class YagoDB:
         """Close the connection to the database."""
         self._curr.close()
         self._conn.close()
+
+    def query(self, query: str):
+        """Query the database.
+
+        Args:
+        - query: The query to be run
+
+        Returns:
+        - The result of the query
+        """
+        self._curr.execute(query)
+        return self._curr.fetchall()
 
 def main():
     parser = argparse.ArgumentParser()
