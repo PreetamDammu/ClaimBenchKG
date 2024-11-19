@@ -1,4 +1,4 @@
-"""Random walk sampling from a Wikidata5m graph.
+"""Random walk sampling from a Wikidata5m graph created by `parse_graph.py`.
 
 - Use `parse_graph.py` to generate the data pickle
 - `c` is a hyperparameter representing the dampening of common nodes sampling

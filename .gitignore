@@ -1,3 +1,10 @@
 inputs
 .env
-utils/__pycache__
+*__pycache__
+*.pyc
+
+*.db
+*.ttl
+*.ntx
+
+yago/db/dump
