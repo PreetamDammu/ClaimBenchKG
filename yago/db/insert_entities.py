@@ -12,9 +12,9 @@ import sqlite3
 
 from tqdm import tqdm
 
-from classes import Item, Property, Claim
-from constants.main import DB_NAME
-from yagodb import YagoDB
+from .classes import Item, Property, Claim
+from .constants.main import DB_NAME
+from .yagodb import YagoDB
 
 TTL_PATH = os.path.join(os.path.dirname(__file__), 'yago-facts.ttl')
 PREFIX_PATH = os.path.join(os.path.dirname(__file__), 'yago-prefixes.txt')
@@ -155,7 +155,7 @@ def read_ttl_file(ttl_path: str, db: YagoDB, batch_length: int) -> None:
             entities_list = list([entity, None, None] for entity in entities_set)
             res = insert_entities(entities_list, db)
             count += res if res else 0
-            
+
         print(f'Inserted {count} entities.')
 
 def main(ttl_path: str, db_name: str, batch_length: int) -> None:

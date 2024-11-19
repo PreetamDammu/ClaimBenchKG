@@ -2,7 +2,7 @@ import os
 import sqlite3
 import argparse
 
-from constants.main import DB_NAME
+from .constants.main import DB_NAME
 
 def create_db(connection):
     cursor = connection.cursor()
