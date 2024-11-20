@@ -99,7 +99,7 @@ def random_walk(self, depth: int = 3) -> List[str]:
     """
     random_entity = query_random_entity(yago_db)
 
-    subject = random_entity
+    subject = "yago:Siku_Dalam_Seribu" # random_entity
     if not (random_entity.startswith("<") and random_entity.endswith(">")):
         subject_list = random_entity.split(":")
         if len(subject_list) == 2 and subject_list[0] in PREFIXES:
