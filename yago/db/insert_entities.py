@@ -186,6 +186,4 @@ if __name__=="__main__":
     
     error_file = open(ERROR_PATH, 'a')
     main(args.ttl_path, args.db_name, args.batch_length)
-    args.ttl_path = TTL_ALL_PATH
-    main(args.ttl_path, args.db_name, args.batch_length)
     error_file.close()
