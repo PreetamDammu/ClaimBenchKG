@@ -16,7 +16,8 @@ from .classes import Item, Property, Claim
 from .constants.main import DB_NAME
 from .yagodb import YagoDB
 
-TTL_PATH = os.path.join(os.path.dirname(__file__), 'data/yago-facts-sample.ttl')
+TTL_PATH = os.path.join(os.path.dirname(__file__), 'data/yago-facts.ttl')
+TTL_ALL_PATH = os.path.join(os.path.dirname(__file__), 'data/yago-beyond-wikipedia.ttl')
 
 PREFIX_PATH = os.path.join(os.path.dirname(__file__), 'yago-prefixes.txt')
 ERROR_PATH = os.path.join(os.path.dirname(__file__), 'error.txt')
@@ -244,5 +245,7 @@ if __name__=="__main__":
     args = parser.parse_args()
     
     error_file = open(ERROR_PATH, 'a')
+    main(args.ttl_path, args.db_name, args.batch_length)
+    args.ttl_path = TTL_ALL_PATH
     main(args.ttl_path, args.db_name, args.batch_length)
     error_file.close()
