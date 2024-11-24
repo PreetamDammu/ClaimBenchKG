@@ -74,7 +74,7 @@ class YagoDB:
         self._conn.commit()
         return id
     
-    def insert_items(self, items: List[Item]) -> None:
+    def insert_items(self, items: List[Item]) -> int:
         """Insert multiple items into the database.
         Used for efficient inserts with executemany.
         Also updates the count of the items.
@@ -119,6 +119,21 @@ class YagoDB:
         id = self._curr.fetchone()[0]
         self._conn.commit()
         return id
+
+    def insert_properties(self, properties: List[Property]) -> int:
+        """Insert multiple properties into the database.
+        Used for efficient inserts with executemany.
+
+        Args:
+        - properties: List of `Property` to be inserted
+        """
+        self._curr.executemany('''
+            INSERT OR IGNORE INTO properties VALUES (?, ?)
+        ''', [(property.property_id, property.property_label) for property in properties])
+        rows_inserted = self._curr.rowcount
+        self._conn.commit()
+        return rows_inserted
+
 
     def get_claim(self, claim_id: int) -> Claim:
         """Get a claim from the database.

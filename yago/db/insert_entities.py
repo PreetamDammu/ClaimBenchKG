@@ -89,7 +89,7 @@ def insert_entities(entities: List[Tuple[str, str, str]], db: YagoDB) -> int:
 
 def read_ttl_line(line: str) -> Tuple[str, str, str]:
     """
-    Read a line of the ttl file and return the entities.
+    Read a line of the ttl file and return the entities and property.
 
     Parameters:
     ----------
@@ -134,6 +134,7 @@ def read_ttl_file(ttl_path: str, db: YagoDB, batch_length: int) -> None:
 
     count = 0
     entities_set = set()
+    properties_set = set()
     with open(ttl_path, 'r') as f:
         for line in tqdm(f):
             entities = read_ttl_line(line)
@@ -141,6 +142,7 @@ def read_ttl_file(ttl_path: str, db: YagoDB, batch_length: int) -> None:
                 continue
             
             entities_set.add(entities[0])
+            properties_set.add(entities[1])
             if len(entities_set) == batch_length:
                 entities_list = list([entity, None, None] for entity in entities_set)
 
@@ -149,6 +151,9 @@ def read_ttl_file(ttl_path: str, db: YagoDB, batch_length: int) -> None:
                 count += res if res else 0
                 print(f'Inserted {batch_length} entities. Total: {count}')
             
+            if len(properties_set) == batch_length:
+                # Insert properties
+                pass
             # if count == TOTAL:
             #     return
         
