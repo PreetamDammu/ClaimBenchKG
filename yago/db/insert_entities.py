@@ -132,8 +132,9 @@ def read_ttl_file(ttl_path: str, db: YagoDB, batch_length: int) -> None:
     # For Dev
     TOTAL = 10
 
-    count = 0
+    entities_count = 0
     entities_set = set()
+    properties_count = 0
     properties_set = set()
     with open(ttl_path, 'r') as f:
         for line in tqdm(f):
@@ -153,16 +154,25 @@ def read_ttl_file(ttl_path: str, db: YagoDB, batch_length: int) -> None:
             
             if len(properties_set) == batch_length:
                 # Insert properties
-                pass
+                properties_list = list([property, None] for property in properties_set)
+
+                res = db.insert_properties(properties_list)
+                properties_set = set()
+                properties_count += res if res else 0
+                print(f'Inserted {batch_length} properties. Total: {properties_count}')
             # if count == TOTAL:
             #     return
         
         if entities_set:
             entities_list = list([entity, None, None] for entity in entities_set)
             res = insert_entities(entities_list, db)
-            count += res if res else 0
+            entities_count += res if res else 0
+        if properties_set:
+            properties_list = list([property, None] for property in properties_set)
+            res = db.insert_properties(properties_list)
+            properties_count += res if res else 0
 
-        print(f'Inserted {count} entities.')
+        print(f'Inserted {entities_count} entities. Inserted {properties_count} properties.')
 
 def main(ttl_path: str, db_name: str, batch_length: int) -> None:
     """
