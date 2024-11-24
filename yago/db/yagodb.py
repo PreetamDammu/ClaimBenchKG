@@ -19,6 +19,12 @@ class YagoDB:
         self._conn = sqlite3.connect(db_name)
         self._curr = self._conn.cursor()
 
+    def getConnection(self):
+        return self._conn
+    
+    def getCursor(self):
+        return self._curr
+
     def create_db(self):
         """Create the database."""
         self._curr.execute('''
@@ -67,7 +73,8 @@ class YagoDB:
         - item: `Item` to be inserted
         """
         self._curr.execute('''
-            INSERT OR IGNORE INTO items VALUES (?, ?, ?)
+            INSERT OR IGNORE INTO items (item_id, item_label, item_description)
+                           VALUES (?, ?, ?)
                            RETURNING item_id
         ''', (item.item_id, item.item_label, item.item_description))
         id = self._curr.fetchone()[0]
@@ -83,9 +90,10 @@ class YagoDB:
         - items: List of `Item` to be inserted
         """
         self._curr.executemany('''
-            INSERT OR IGNORE INTO items VALUES (?, ?, ?)
-            ON CONFLICT(item_id) DO UPDATE SET count = count + 1
-        ''', [(item.item_id, item.item_label, item.item_description) for item in items])
+            INSERT INTO items (item_id, item_label, item_description, count) 
+                               VALUES (?, ?, ?, ?)
+                               ON CONFLICT(item_id) DO UPDATE SET count = count + ?
+        ''', [(item.item_id, item.item_label, item.item_description, item.count, item.count) for item in items])
         rows_inserted = self._curr.rowcount
         self._conn.commit()
         return rows_inserted

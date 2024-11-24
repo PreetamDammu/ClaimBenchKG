@@ -23,7 +23,10 @@ def main(args):
     connection = sqlite3.connect(args.database)
     # res = create_db(connection)
     # query = "select count(item_id) from items;"
-    query = "select * from items;"
+    # query = "select * from items;"
+    query = """select type, name, tbl_name, sql
+        FROM sqlite_master
+        WHERE type='index'"""
     res = query_db(connection, query)
     print(res)
 
