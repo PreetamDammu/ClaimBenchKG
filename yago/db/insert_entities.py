@@ -16,7 +16,7 @@ from .classes import Item, Property, Claim
 from .constants.main import DB_NAME
 from .yagodb import YagoDB
 
-TTL_PATH = os.path.join(os.path.dirname(__file__), 'data/yago-facts.ttl')
+TTL_PATH = os.path.join(os.path.dirname(__file__), 'data/yago-facts-sample.ttl')
 
 PREFIX_PATH = os.path.join(os.path.dirname(__file__), 'yago-prefixes.txt')
 ERROR_PATH = os.path.join(os.path.dirname(__file__), 'error.txt')

@@ -25,7 +25,8 @@ class YagoDB:
             CREATE TABLE items (
                 item_id TEXT PRIMARY KEY,
                 item_label TEXT,
-                item_description TEXT
+                item_description TEXT,
+                count INTEGER DEFAULT 0
             )
         ''')
         self._curr.execute('''
@@ -75,13 +76,15 @@ class YagoDB:
     
     def insert_items(self, items: List[Item]) -> None:
         """Insert multiple items into the database.
-        Used for efficient inserts with executemany
+        Used for efficient inserts with executemany.
+        Also updates the count of the items.
 
         Args:
         - items: List of `Item` to be inserted
         """
         self._curr.executemany('''
             INSERT OR IGNORE INTO items VALUES (?, ?, ?)
+            ON CONFLICT(item_id) DO UPDATE SET count = count + 1
         ''', [(item.item_id, item.item_label, item.item_description) for item in items])
         rows_inserted = self._curr.rowcount
         self._conn.commit()
@@ -103,6 +106,20 @@ class YagoDB:
         row = self._curr.fetchone()
         return Property(*row)
     
+    def insert_property(self, property: Property) -> int:
+        """Insert a property into the database.
+
+        Args:
+        - property: `Property` to be inserted
+        """
+        self._curr.execute('''
+            INSERT OR IGNORE INTO properties VALUES (?, ?)
+                           RETURNING property_id
+        ''', (property.property_id, property.property_label))
+        id = self._curr.fetchone()[0]
+        self._conn.commit()
+        return id
+
     def get_claim(self, claim_id: int) -> Claim:
         """Get a claim from the database.
 
