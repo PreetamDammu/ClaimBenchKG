@@ -24,7 +24,7 @@ def main(db_name: str):
     create_index_on_items_table(connection, cursor, 'item_label')
 
 if __name__=="__main__":
-    parser = argparse.ArgumentParser(description='Insert entities into the Yago database.')
+    parser = argparse.ArgumentParser(description='Index entities into the Yago database.')
     parser.add_argument('--db_name', type=str, default=DB_NAME, help='Name of the database.')
     args = parser.parse_args()
     

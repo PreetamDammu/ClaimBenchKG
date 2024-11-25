@@ -191,7 +191,7 @@ def read_ttl_file(ttl_path: str, db: YagoDB, batch_length: int) -> None:
                                      for (entity, count) in entities_set.items())
 
                 res = insert_entities(entities_list, db)
-                entities_set = set()
+                entities_set = dict()
                 entities_count += res if res else 0
                 print(f'Inserted {batch_length} entities. Total: {entities_count}')
             
@@ -209,7 +209,7 @@ def read_ttl_file(ttl_path: str, db: YagoDB, batch_length: int) -> None:
         if entities_set:
             entities_list = list([entity, createEntityLabel(entity), None, count] 
                                  for (entity, count) in entities_set.items())
-            print(entities_list)
+            # print(entities_list)
             res = insert_entities(entities_list, db)
             entities_count += res if res else 0
         if properties_set:
