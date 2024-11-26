@@ -10,8 +10,8 @@ from typing import List, Set
 from db.yagodb import YagoDB
 from db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
 
-YAGO_ENTITY_STORE_DB_PATH = os.path.join(os.path.dirname(__file__), "db/yago.db")
-YAGO_ENTITY_LENGTH = YAGO_FACTS_ENTITY_COUNT
+YAGO_ENTITY_STORE_DB_PATH = os.path.join(os.path.dirname(__file__), "db/yago_all.db")
+YAGO_ENTITY_LENGTH = YAGO_ALL_ENTITY_COUNT
 
 YAGO_PREFIXES_PATH = os.path.join(os.path.dirname(__file__), "db/yago-prefixes.txt")
 
@@ -27,13 +27,15 @@ def get_prefixes() -> str:
     with open(YAGO_PREFIXES_PATH, "r") as f:
         for prefix in f:
             prefix_list = prefix.split()
-            if len(prefix_list) != 2:
+            if len(prefix_list) != 4:
                 continue
-            if prefix_list[0].endswith(":"):
-                prefix_list[0] = prefix_list[0][:-1]
-            if prefix_list[1].startswith("<") and prefix_list[1].endswith(">"):
-                prefix_list[1] = prefix_list[1][1:-1]
-            prefixes[prefix_list[0]] = prefix_list[1]
+            if prefix_list[0] != "@prefix":
+                continue
+            if prefix_list[1].endswith(":"):
+                prefix_list[1] = prefix_list[1][:-1]
+            if prefix_list[2].startswith("<") and prefix_list[2].endswith(">"):
+                prefix_list[2] = prefix_list[2][1:-1]
+            prefixes[prefix_list[1]] = prefix_list[2]
     return prefixes
 
 PREFIXES = get_prefixes()
@@ -117,6 +119,8 @@ def random_walk(self, depth: int = 3) -> List[str]:
 
 if __name__ == "__main__":
     yago_db = YagoDB(YAGO_ENTITY_STORE_DB_PATH)
+    random_entity = query_random_entity(yago_db)
+    print(random_entity)
 
     # query_triple(YAGO_ENDPOINT_URL, random_entity)
 
