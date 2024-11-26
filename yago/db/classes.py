@@ -2,20 +2,22 @@
 
 
 class Item:
-    def __init__(self, item_id: str, item_label: str, item_description: str):
+    def __init__(self, item_id: str, item_label: str, item_description: str, count: int = 0):
         """Instantiate the item.
 
         Args:
         - item_id: ID of the item
         - item_label: label/alias of the item
         - item_description: description of the item
+        - count: count of the item
         """
         self.item_id: str = item_id
         self.item_label: str = item_label
         self.item_description: str = item_description
+        self.count: int = count
 
     def __str__(self) -> str:
-        return f'Item: {self.item_id}. {self.item_description}'
+        return f'Item: {self.item_id}. {self.item_description} ({self.count})'
 
 
 class Property:

@@ -2,7 +2,7 @@ import os
 import sqlite3
 import argparse
 
-from .constants.main import DB_NAME
+from db.constants.main import DB_NAME
 
 def create_db(connection):
     cursor = connection.cursor()
@@ -23,7 +23,11 @@ def main(args):
     connection = sqlite3.connect(args.database)
     # res = create_db(connection)
     # query = "select count(item_id) from items;"
-    query = "select * from items limit 10;"
+    # query = "select * from items limit 10;"
+    query = "select * from items order by count desc limit 10;"
+    # query = """select type, name, tbl_name, sql
+    #     FROM sqlite_master
+    #     WHERE type='index'"""
     res = query_db(connection, query)
     print(res)
 
