@@ -7,8 +7,8 @@ import random
 import requests
 from typing import List, Set
 
-from db.yagodb import YagoDB
-from db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
+from .db.yagodb import YagoDB
+from .db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
 
 """
 Note: Call this file from ClaimbenchKG as follows:
