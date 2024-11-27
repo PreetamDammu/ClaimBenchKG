@@ -25,23 +25,65 @@ def get_prefixes(yago_prefixes_path: str) -> str:
             prefixes[prefix_list[0]] = prefix_list[1]
     return prefixes
 
-def query_random_entities(yago_db: YagoDB, *, 
-    num_of_entities: int = 1) -> List[str]:
-    """Query a fixed number of random entities from the YAGO knowledge graph.
+def get_url_from_prefix_and_id(prefixes: dict, entity_id: str) -> str:
+    """Get the URL from the prefixes and entity ID.
+
+    Args:
+    - prefixes: The prefixes
+    - entity_id: The entity ID
+
+    Returns:
+    - The URL
+    """
+    if not (entity_id.startswith("<") and entity_id.endswith(">")):
+        entity_list = entity_id.split(":")
+        if len(entity_list) == 2 and entity_list[0] in prefixes:
+            entity_id = f"{prefixes[entity_list[0]]}{entity_list[1]}"
+        else:
+            entity_id = f"{entity_id}"
+    return entity_id
+
+def get_triples_query(entity_id: str) -> str:
+    """Get the triples query for the entity ID.
+
+    Args:
+    - entity_id: The entity ID
+
+    Returns:
+    - The triples query
+    """
+    query = f"""
+    SELECT ?predicate ?object WHERE {{
+        {entity_id} ?predicate ?object
+    }}
+    """
+    return query
+
+
+# SparQL functions
+def get_triples_multiple_subjects_query(*,
+    entities: List[str] = [], filter_literals: bool = True) -> str:
+    """
+    Generate a query to get the triples for a list of entities.
 
     Parameters:
     ----------
-    yago_db: YagoDB
-        The YAGO database
+    entities: List[str]
+        The list of entities to get the triples for
 
-    num_of_entities: int
-        The number of entities to query
+    filter_literals: bool
+        Whether to filter out literals
+
     Returns:
     ----------
-    A list of random entities
+    query: str
+        The query to get the triples for the entities
     """
     query = f"""
-    SELECT item_id, item_label FROM items ORDER BY RANDOM() LIMIT {num_of_entities}
+    SELECT ?subject ?predicate ?object WHERE {{
+        VALUES ?subject {{ {" ".join(entities)} }}
+        ?subject ?predicate ?object
+        {   "FILTER isIRI(?object)" if filter_literals else "" }
+    }}
     """
-    results = yago_db.query(query)
-    return results
+    return query

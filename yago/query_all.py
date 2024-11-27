@@ -10,9 +10,10 @@ from typing import List, Set
 
 from .db.yagodb import YagoDB
 from .db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
+from .db.functions.entity import get_random_entities_query
 
 from .utils.constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
-from .utils.functions import get_prefixes, query_random_entities
+from .utils.functions import get_prefixes, get_url_from_prefix_and_id, get_triples_query, get_triples_multiple_subjects_query
 
 """
 Note: Call this file from ClaimbenchKG as follows:
@@ -21,50 +22,25 @@ python -m yago.query
 
 PREFIXES = get_prefixes(yago_prefixes_path=YAGO_PREFIXES_PATH)
 
-def query_random_entity(yago_db: YagoDB) -> str:
-    """Query a random entity from the YAGO knowledge graph.
-
-    Returns:
-    - The ID of a random entity
-    """
-    query = """
-    SELECT item_id FROM items ORDER BY RANDOM() LIMIT 1
-    """
-    results = yago_db.query(query)
-    return results[0][0]
-
-def query_triple(yago_endpoint_url: str, subject: str, *, 
-                 filter_literals: bool = True) -> List[str]:
-    """Query a triple from the YAGO knowledge graph.
+def query_kg(yago_endpoint_url: str, query_sparql: str) -> List[str]:
+    """Query the YAGO knowledge graph.
 
     Args:
-    - subject: The subject of the triple
-    - filter_literals: Whether to filter out literals
+    - yago_endpoint_url: The YAGO endpoint URL
+    - query_sparql: The SPARQL query
 
     Returns:
-    - The triple
+    - The response
     """
     headers = {
         "Content-Type": "application/sparql-query",
         "Accept": "application/sparql-results+json",
     }
 
-    query = f"""
-    SELECT ?predicate ?object WHERE {{
-        {subject} ?predicate ?object
-        {   "FILTER isIRI(?object)" if filter_literals else "" }
-    }}
-    """
-
-    response = requests.post(yago_endpoint_url, headers=headers, data=query)
+    response = requests.post(yago_endpoint_url, headers=headers, data=query_sparql)
     if response.status_code == 200:
         response_json = response.json()  # Prints the JSON result
-        # Randomly select a triple
-        if len(response_json["results"]["bindings"]) == 0:
-            return None
-        triple = random.choice(response_json["results"]["bindings"])
-        # triple = response_json["results"]["bindings"][0]
-        return triple
+        return response_json
     else:
         print(f"Error: {response.status_code}")
         print(response.text)
@@ -79,15 +55,9 @@ def random_walk(self, depth: int = 3) -> List[str]:
     Returns:
     - A list of node IDs visited during the walk
     """
-    random_entity = query_random_entity(yago_db)
+    random_entity = query_random_entities(yago_db)
 
-    subject = random_entity
-    if not (random_entity.startswith("<") and random_entity.endswith(">")):
-        subject_list = random_entity.split(":")
-        if len(subject_list) == 2 and subject_list[0] in PREFIXES:
-            subject = f"{PREFIXES[subject_list[0]]}{subject_list[1]}"
-        else:
-            subject = f"{subject}"
+    subject = get_url_from_prefix_and_id(PREFIXES, random_entity[0][0])
 
     walk = [subject]
     for _ in range(depth):
@@ -104,9 +74,20 @@ if __name__ == "__main__":
 
     yago_db = YagoDB(YAGO_ENTITY_STORE_DB_PATH)
 
-    print(query_random_entities(yago_db, 3))
+    # query = get_triples_query(entity_id="<http://yago-knowledge.org/resource/2Mass_J14070720-0234401_Q80666561>")
+    # response = query_kg(YAGO_ENDPOINT_URL, query)
+    # print(response)
 
-    # query_triple(YAGO_ENDPOINT_URL, random_entity)
+    # query1 = get_random_entities_query(num_of_entities=3)
+    # entities = yago_db.query(query1)
+    # entity_list = [f"<{entity[1]}>" for entity in entities]
+    entity_list = ["<http://yago-knowledge.org/resource/2Mass_J14070720-0234401_Q80666561>", 
+    "<http://yago-knowledge.org/resource/Mgc_13393_Q83004058>"]
+
+    query2 = get_triples_multiple_subjects_query(entities=entity_list, filter_literals=True)
+    print(query2)
+    response = query_kg(YAGO_ENDPOINT_URL, query2)
+    print(response)
 
     # walk = random_walk(yago_db)
     # print(walk)
