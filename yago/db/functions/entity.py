@@ -1,7 +1,5 @@
 from typing import List, Set
 
-from ..yagodb import YagoDB
-
 ############################################################################################################
 # Functions
 def get_random_entities_query(*, 

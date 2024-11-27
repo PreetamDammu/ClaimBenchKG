@@ -1,8 +1,7 @@
 ############################################################################################################
 # Importing necessary libraries
 from typing import List, Set
-
-from ..db.yagodb import YagoDB
+import requests
 
 ############################################################################################################
 # Functions
@@ -87,3 +86,27 @@ def get_triples_multiple_subjects_query(*,
     }}
     """
     return query
+
+def query_kg(yago_endpoint_url: str, query_sparql: str) -> List[str]:
+    """Query the YAGO knowledge graph.
+
+    Args:
+    - yago_endpoint_url: The YAGO endpoint URL
+    - query_sparql: The SPARQL query
+
+    Returns:
+    - The response
+    """
+    headers = {
+        "Content-Type": "application/sparql-query",
+        "Accept": "application/sparql-results+json",
+    }
+
+    response = requests.post(yago_endpoint_url, headers=headers, data=query_sparql)
+    if response.status_code == 200:
+        response_json = response.json()  # Prints the JSON result
+        return response_json
+    else:
+        print(f"Error: {response.status_code}")
+        print(response.text)
+        return None
