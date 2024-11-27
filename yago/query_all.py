@@ -5,38 +5,21 @@ import os
 import sys
 import random
 import requests
+import argparse
 from typing import List, Set
 
-from db.yagodb import YagoDB
-from db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
+from .db.yagodb import YagoDB
+from .db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
 
-YAGO_ENTITY_STORE_DB_PATH = os.path.join(os.path.dirname(__file__), "db/yago.db")
-YAGO_ENTITY_LENGTH = YAGO_FACTS_ENTITY_COUNT
+from .utils.constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
+from .utils.functions import get_prefixes, query_random_entities
 
-YAGO_PREFIXES_PATH = os.path.join(os.path.dirname(__file__), "db/yago-prefixes.txt")
+"""
+Note: Call this file from ClaimbenchKG as follows:
+python -m yago.query
+"""
 
-YAGO_ENDPOINT_URL = "http://localhost:9999/bigdata/sparql"
-
-def get_prefixes() -> str:
-    """Get the prefixes for the YAGO knowledge graph.
-
-    Returns:
-    - The prefixes
-    """
-    prefixes = dict()
-    with open(YAGO_PREFIXES_PATH, "r") as f:
-        for prefix in f:
-            prefix_list = prefix.split()
-            if len(prefix_list) != 2:
-                continue
-            if prefix_list[0].endswith(":"):
-                prefix_list[0] = prefix_list[0][:-1]
-            if prefix_list[1].startswith("<") and prefix_list[1].endswith(">"):
-                prefix_list[1] = prefix_list[1][1:-1]
-            prefixes[prefix_list[0]] = prefix_list[1]
-    return prefixes
-
-PREFIXES = get_prefixes()
+PREFIXES = get_prefixes(yago_prefixes_path=YAGO_PREFIXES_PATH)
 
 def query_random_entity(yago_db: YagoDB) -> str:
     """Query a random entity from the YAGO knowledge graph.
@@ -108,6 +91,7 @@ def random_walk(self, depth: int = 3) -> List[str]:
 
     walk = [subject]
     for _ in range(depth):
+        print(walk)
         triple = query_triple(YAGO_ENDPOINT_URL, f"<{walk[-1]}>")
         if triple is None:
             break
@@ -116,9 +100,13 @@ def random_walk(self, depth: int = 3) -> List[str]:
     return walk
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Query the YAGO knowledge graph.")
+
     yago_db = YagoDB(YAGO_ENTITY_STORE_DB_PATH)
+
+    print(query_random_entities(yago_db, 3))
 
     # query_triple(YAGO_ENDPOINT_URL, random_entity)
 
-    walk = random_walk(yago_db)
-    print(walk)
+    # walk = random_walk(yago_db)
+    # print(walk)

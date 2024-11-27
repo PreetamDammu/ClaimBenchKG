@@ -10,6 +10,12 @@ from typing import List, Set
 from db.yagodb import YagoDB
 from db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
 
+"""
+Note: Call this file from ClaimbenchKG as follows:
+python -m yago.query
+"""
+
+
 YAGO_ENTITY_STORE_DB_PATH = os.path.join(os.path.dirname(__file__), "db/yago.db")
 YAGO_ENTITY_LENGTH = YAGO_FACTS_ENTITY_COUNT
 
