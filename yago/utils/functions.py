@@ -61,7 +61,8 @@ def get_triples_query(entity_id: str) -> str:
 
 # SparQL functions
 def get_triples_multiple_subjects_query(*,
-    entities: List[str] = [], filter_literals: bool = True) -> str:
+    entities: List[str] = [], filter_literals: bool = True,
+    columns_dict: dict) -> str:
     """
     Generate a query to get the triples for a list of entities.
 
@@ -73,16 +74,23 @@ def get_triples_multiple_subjects_query(*,
     filter_literals: bool
         Whether to filter out literals
 
+    columns_dict: dict
+        The columns dictionary
     Returns:
     ----------
     query: str
         The query to get the triples for the entities
     """
+    if columns_dict is None:
+        columns_dict = {}
+    subject = columns_dict["subject"] if "subject" in columns_dict else "subject"
+    predicate = columns_dict["predicate"] if "predicate" in columns_dict else "predicate"
+    _object = columns_dict["object"] if "object" in columns_dict else "object"
     query = f"""
-    SELECT ?subject ?predicate ?object WHERE {{
-        VALUES ?subject {{ {" ".join(entities)} }}
-        ?subject ?predicate ?object
-        {   "FILTER isIRI(?object)" if filter_literals else "" }
+    SELECT ?{subject} ?{predicate} ?{_object} WHERE {{
+        VALUES ?{subject} {{ {" ".join(entities)} }}
+        ?{subject} ?{predicate} ?{_object}
+        {   f"FILTER isIRI(?{_object})" if filter_literals else "" }
     }}
     """
     return query
