@@ -5,89 +5,23 @@ import os
 import sys
 import random
 import requests
+import argparse
 from typing import List, Set
 
-from db.yagodb import YagoDB
-from db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
+from .db.yagodb import YagoDB
+from .db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
+from .db.functions.entity import get_random_entities_query
 
-YAGO_ENTITY_STORE_DB_PATH = os.path.join(os.path.dirname(__file__), "db/yago_all.db")
-YAGO_ENTITY_LENGTH = YAGO_ALL_ENTITY_COUNT
+from .utils.constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
+from .utils.functions import get_prefixes, get_url_from_prefix_and_id, get_triples_query, \
+    get_triples_multiple_subjects_query, query_kg
 
-YAGO_PREFIXES_PATH = os.path.join(os.path.dirname(__file__), "db/yago-prefixes.txt")
+"""
+Note: Call this file from ClaimbenchKG as follows:
+python -m yago.query
+"""
 
-YAGO_ENDPOINT_URL = "http://localhost:9999/bigdata/sparql"
-
-def get_prefixes() -> str:
-    """Get the prefixes for the YAGO knowledge graph.
-
-    Returns:
-    - The prefixes
-    """
-    prefixes = dict()
-    with open(YAGO_PREFIXES_PATH, "r") as f:
-        for prefix in f:
-            prefix_list = prefix.split()
-            if len(prefix_list) != 4:
-                continue
-            if prefix_list[0] != "@prefix":
-                continue
-            if prefix_list[1].endswith(":"):
-                prefix_list[1] = prefix_list[1][:-1]
-            if prefix_list[2].startswith("<") and prefix_list[2].endswith(">"):
-                prefix_list[2] = prefix_list[2][1:-1]
-            prefixes[prefix_list[1]] = prefix_list[2]
-    return prefixes
-
-PREFIXES = get_prefixes()
-
-def query_random_entity(yago_db: YagoDB) -> str:
-    """Query a random entity from the YAGO knowledge graph.
-
-    Returns:
-    - The ID of a random entity
-    """
-    query = """
-    SELECT item_id FROM items ORDER BY RANDOM() LIMIT 1
-    """
-    results = yago_db.query(query)
-    return results[0][0]
-
-def query_triple(yago_endpoint_url: str, subject: str, *, 
-                 filter_literals: bool = True) -> List[str]:
-    """Query a triple from the YAGO knowledge graph.
-
-    Args:
-    - subject: The subject of the triple
-    - filter_literals: Whether to filter out literals
-
-    Returns:
-    - The triple
-    """
-    headers = {
-        "Content-Type": "application/sparql-query",
-        "Accept": "application/sparql-results+json",
-    }
-
-    query = f"""
-    SELECT ?predicate ?object WHERE {{
-        {subject} ?predicate ?object
-        {   "FILTER isIRI(?object)" if filter_literals else "" }
-    }}
-    """
-
-    response = requests.post(yago_endpoint_url, headers=headers, data=query)
-    if response.status_code == 200:
-        response_json = response.json()  # Prints the JSON result
-        # Randomly select a triple
-        if len(response_json["results"]["bindings"]) == 0:
-            return None
-        triple = random.choice(response_json["results"]["bindings"])
-        # triple = response_json["results"]["bindings"][0]
-        return triple
-    else:
-        print(f"Error: {response.status_code}")
-        print(response.text)
-        return None
+PREFIXES = get_prefixes(yago_prefixes_path=YAGO_PREFIXES_PATH)
 
 def random_walk(self, depth: int = 3) -> List[str]:
     """Random walk on the YAGO knowledge graph.
@@ -98,18 +32,13 @@ def random_walk(self, depth: int = 3) -> List[str]:
     Returns:
     - A list of node IDs visited during the walk
     """
-    random_entity = query_random_entity(yago_db)
+    random_entity = query_random_entities(yago_db)
 
-    subject = random_entity
-    if not (random_entity.startswith("<") and random_entity.endswith(">")):
-        subject_list = random_entity.split(":")
-        if len(subject_list) == 2 and subject_list[0] in PREFIXES:
-            subject = f"{PREFIXES[subject_list[0]]}{subject_list[1]}"
-        else:
-            subject = f"{subject}"
+    subject = get_url_from_prefix_and_id(PREFIXES, random_entity[0][0])
 
     walk = [subject]
     for _ in range(depth):
+        print(walk)
         triple = query_triple(YAGO_ENDPOINT_URL, f"<{walk[-1]}>")
         if triple is None:
             break
@@ -118,11 +47,22 @@ def random_walk(self, depth: int = 3) -> List[str]:
     return walk
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Query the YAGO knowledge graph.")
+
     yago_db = YagoDB(YAGO_ENTITY_STORE_DB_PATH)
-    random_entity = query_random_entity(yago_db)
-    print(random_entity)
 
-    # query_triple(YAGO_ENDPOINT_URL, random_entity)
+    # query = get_triples_query(entity_id="<http://yago-knowledge.org/resource/2Mass_J14070720-0234401_Q80666561>")
+    # response = query_kg(YAGO_ENDPOINT_URL, query)
+    # print(response)
 
-    walk = random_walk(yago_db)
-    print(walk)
+    query1 = get_random_entities_query(num_of_entities=3)
+    entities = yago_db.query(query1)
+    entity_list = [f"<{entity[1]}>" for entity in entities]
+
+    query2 = get_triples_multiple_subjects_query(entities=entity_list, filter_literals=True)
+    print(query2)
+    response = query_kg(YAGO_ENDPOINT_URL, query2)
+    print(response)
+
+    # walk = random_walk(yago_db)
+    # print(walk)
