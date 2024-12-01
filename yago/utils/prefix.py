@@ -42,19 +42,3 @@ def get_url_from_prefix_and_id(prefixes: dict, entity_id: str) -> str:
         else:
             entity_id = f"{entity_id}"
     return entity_id
-
-def get_triples_query(entity_id: str) -> str:
-    """Get the triples query for the entity ID.
-
-    Args:
-    - entity_id: The entity ID
-
-    Returns:
-    - The triples query
-    """
-    query = f"""
-    SELECT ?predicate ?object WHERE {{
-        {entity_id} ?predicate ?object
-    }}
-    """
-    return query

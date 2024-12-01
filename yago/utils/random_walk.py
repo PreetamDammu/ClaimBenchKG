@@ -11,13 +11,39 @@ from typing import List, Set
 import numpy as np
 import pandas as pd
 
-from ..db.yagodb import YagoDB
-# from ..db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
-from ..db.functions.entity import get_random_entities_query
+# A temporary solution to import from parent directory lol
+# until the package is properly installable
+if __name__=='__main__':
+    if __package__ is None:
+        from os import path
+        sys.path.insert(0, path.dirname( path.dirname( path.abspath(__file__) ) ) )
+        from db.yagodb import YagoDB
+        from db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
+        from db.functions.entity import get_random_entities_query
+        from kg.query import get_triples_multiple_subjects_query, query_kg
+        sys.path.insert(0, path.dirname( path.abspath(__file__) ) )
+        from constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
+        from prefix import get_prefixes, get_url_from_prefix_and_id
+    else:
+        from ..db.yagodb import YagoDB
+        from ..db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
+        from ..db.functions.entity import get_random_entities_query
+        from ..kg.query import get_triples_multiple_subjects_query, query_kg
+        from .constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
+        from .prefix import get_prefixes, get_url_from_prefix_and_id
+else:
+    from db.yagodb import YagoDB
+    from db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
+    from db.functions.entity import get_random_entities_query
+    from kg.query import get_triples_multiple_subjects_query, query_kg
+    from utils.constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
+    from utils.prefix import get_prefixes, get_url_from_prefix_and_id
 
-from .constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
-from .prefix import get_prefixes, get_url_from_prefix_and_id, get_triples_query, \
-    get_triples_multiple_subjects_query, query_kg
+SPARQL_COLUMNS_DICT = {
+    "subject": "subject",
+    "predicate": "predicate",
+    "object": "object"
+}
 
 def random_walks_multiple(yago_db: YagoDB, *, num_of_entities: int = 10, depth: int = 3) -> pd.DataFrame:
     """
