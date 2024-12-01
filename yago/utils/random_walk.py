@@ -20,7 +20,7 @@ if __name__=='__main__':
         from db.yagodb import YagoDB
         from db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
         from db.functions.entity import get_random_entities_query
-        from kg.query import get_triples_multiple_subjects_query, query_kg
+        from kg.query import get_triples_multiple_subjects_query, query_kg, get_triples_from_response
         sys.path.insert(0, path.dirname( path.abspath(__file__) ) )
         from constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
         from prefix import get_prefixes, get_url_from_prefix_and_id
@@ -28,14 +28,14 @@ if __name__=='__main__':
         from ..db.yagodb import YagoDB
         from ..db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
         from ..db.functions.entity import get_random_entities_query
-        from ..kg.query import get_triples_multiple_subjects_query, query_kg
+        from ..kg.query import get_triples_multiple_subjects_query, query_kg, get_triples_from_response
         from .constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
         from .prefix import get_prefixes, get_url_from_prefix_and_id
 else:
     from db.yagodb import YagoDB
     from db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
     from db.functions.entity import get_random_entities_query
-    from kg.query import get_triples_multiple_subjects_query, query_kg
+    from kg.query import get_triples_multiple_subjects_query, query_kg, get_triples_from_response
     from utils.constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
     from utils.prefix import get_prefixes, get_url_from_prefix_and_id
 
@@ -48,6 +48,23 @@ SPARQL_COLUMNS_DICT = {
 def random_walks_multiple(yago_db: YagoDB, *, num_of_entities: int = 10, depth: int = 3) -> pd.DataFrame:
     """
     Random walks on the YAGO knowledge graph.
+
+    Parameters:
+    ----------
+    yago_db: YagoDB
+        The YagoDB object
+    
+    num_of_entities: int
+        Number of entities to start the random walk with
+
+    depth: int
+        Depth of the random walk
+
+    Returns:
+    ----------
+    entities_df: pd.DataFrame
+        The dataframe of entities and their neighbors
+        Schema: entity0, predicate1, entity1, predicate2, entity2, ...
     """
     query1 = get_random_entities_query(num_of_entities=num_of_entities)
     entities = yago_db.query(query1)
@@ -76,19 +93,6 @@ def single_hop_multiple_entities(yago_db: YagoDB, entities_df: pd.DataFrame, *,
         axis=1, result_type="expand").rename(columns={0: "predicate1", 1: "entity1"})
     return entities_hop_1
 
-def get_triples_from_response(response: dict, *,
-    sparql_columns_dict: dict = SPARQL_COLUMNS_DICT) -> pd.DataFrame:
-    """
-    Extracts triples from the response of a SPARQL query.
-    """
-    triples = []
-    for row in response["results"]["bindings"]:
-        triple = {}
-        for key, value in row.items():
-            triple[sparql_columns_dict[key]] = value["value"]
-        triples.append(triple)
-    return pd.DataFrame(triples)
-
 def sample_triple_for_entity_as_list(triples_df: pd.DataFrame, entity: str, *, 
     sparql_columns_dict: dict = SPARQL_COLUMNS_DICT) -> List[str]:
     """
@@ -102,3 +106,13 @@ def sample_triple_for_entity_as_list(triples_df: pd.DataFrame, entity: str, *,
         return [None, None]
     sampled_triple = matched_triples_df.sample(n=1, replace=False).iloc[0]
     return [sampled_triple[sparql_columns_dict["predicate"]], sampled_triple[sparql_columns_dict["object"]]]
+
+if __name__=='__main__':
+    parser = argparse.ArgumentParser(description="Random walks on the YAGO knowledge graph.")
+    parser.add_argument("--num_of_entities", type=int, default=10, help="Number of entities to start the random walk with.")
+    parser.add_argument("--depth", type=int, default=3, help="Depth of the random walk.")
+    args = parser.parse_args()
+
+    yago_db = YagoDB(db_name=YAGO_ENTITY_STORE_DB_PATH)
+    random_walks_df = random_walks_multiple_v1(yago_db, num_of_entities=args.num_of_entities, depth=args.depth)
+    print(random_walks_df)
