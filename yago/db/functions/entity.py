@@ -39,8 +39,9 @@ def get_entity_count_multiple_query(entity_ids: List[str]) -> str:
     """
     return query
 
-def get_entity_count_from_label_multiple_query(entity_labels: List[str]) -> str:
+def get_entity_count_from_label_multiple_query_placeholder(entity_labels: List[str]) -> str:
     """Generate a query to get the count of multiple entities from the YAGO knowledge graph.
+    This query uses placeholders for the entity labels.
 
     Parameters:
     ----------
@@ -52,9 +53,9 @@ def get_entity_count_from_label_multiple_query(entity_labels: List[str]) -> str:
     query: str
         The sqlite3 query to get the count of the entities, along with their ids and labels
     """
+    placeholders = ", ".join(["?"] * len(entity_labels))
     query = f"""
-    SELECT item_id, item_label, count FROM items WHERE item_label IN 
-    ({", ".join([f"'{entity_label}'" for entity_label in entity_labels])})
+    SELECT item_id, item_label, count FROM items WHERE item_label IN ({placeholders})
     """
     return query
 
