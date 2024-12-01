@@ -5,6 +5,7 @@ This module contains utility functions for the Yago Knowledge Graph.
 # Importing necessary libraries
 from typing import List, Set
 import requests
+import pandas as pd
 
 ############################################################################################################
 # Functions
@@ -68,3 +69,31 @@ def query_kg(yago_endpoint_url: str, query_sparql: str) -> List[str]:
         print(f"Error: {response.status_code}")
         print(response.text)
         return None
+
+def get_triples_from_response(response: dict, *,
+    sparql_columns_dict: dict = None) -> pd.DataFrame:
+    """
+    Extracts triples from the response of a SPARQL query.
+    """
+    if sparql_columns_dict is None:
+        sparql_columns_dict = {
+            "subject": "subject",
+            "predicate": "predicate",
+            "object": "object"
+        }
+    triples = []
+    for row in response["results"]["bindings"]:
+        triple = {}
+        for key, value in row.items():
+            triple[sparql_columns_dict[key]] = value["value"]
+        triples.append(triple)
+    return pd.DataFrame(triples)
+
+if __name__ == "__main__":
+    # Test the functions
+    yago_endpoint_url = "http://yago-knowledge.org/sparql"
+    # query = get_triples_multiple_subjects_query(entities=["<http://yago-knowledge.org/resource/Barack_Obama>"], 
+    #     columns_dict={"subject": "s", "predicate": "p", "object": "o"})
+    # response = query_kg(yago_endpoint_url, query)
+    # triples = get_triples_from_response(response)
+    print(yago_endpoint_url)
