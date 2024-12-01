@@ -51,6 +51,13 @@ SPARQL_COLUMNS_DICT = {
 }
 
 class RandomWalk2:
+    """
+    RandomWalk2 class.
+    It takes into account the number of facts an entity is involved in to weight the sampling.
+    It also returns the description of the entities and predicates.
+
+    NOTE: Most of the functions work with entity_labels instead of entity_ids.
+    """
     def __init__(self, yago_db: YagoDB, *, yago_endpoint_url = YAGO_ENDPOINT_URL,
         sparql_columns_dict: dict = SPARQL_COLUMNS_DICT):
         """
@@ -72,9 +79,84 @@ class RandomWalk2:
         self.sparql_columns_dict = sparql_columns_dict
 
 
+    def single_hop_batch(self, entities_df: pd.DataFrame, entity_column_label: str, *,
+        entities_hop_1_cols: dict = None) -> pd.DataFrame:
+        """
+        Single-hop random walk on the YAGO knowledge graph.
+        Takes a dataframe of entities and returns a dataframe of entities and their neighbors.
+
+        Parameters:
+        ----------
+        entities_df: pd.DataFrame
+            The dataframe of entities
+        
+        entity_column_label: str
+            The entity column label from which to perform the single hop
+
+        entities_hop_1_cols: dict
+            The dictionary of columns to use for the returned entities in the first hop
+
+        Returns:
+        ----------
+        entities_df: pd.DataFrame
+            The dataframe of entities and their neighbors
+        """
+        if entities_hop_1_cols is None:
+            entities_hop_1_cols = {0: "predicate1", 1: "entity1"}
+        
+        # First, get the triples for the entities
+        query2 = get_triples_multiple_subjects_query(
+            entities=[f"<{entity}>" for entity in entities_df[entity_column_label].tolist()], 
+            columns_dict=sparql_columns_dict
+        )
+        response = query_kg(yago_endpoint_url, query2)
+        triples = get_triples_from_response(response)
+
+        # Get the counts for the objects
+        triples_object_counts = self.get_counts_for_entities(entity_series=triples[sparql_columns_dict["object"]],
+            entity_column_label=sparql_columns_dict["object"], count_label=sparql_columns_dict["object_count"])
+        ## The counts returned by get_counts_for_entities align with the triples
+        triples[sparql_columns_dict["object_count"]] = triples_object_counts[sparql_columns_dict["object_count"]].values
+
+        # Finally, use the objects and their counts to get one entity each for the first hop
+        entities_hop_1 = entities_df.apply(
+            lambda row: self.sample_triple_for_entity_by_count(triples_with_object_prob_df=triples,
+                entity=row[entity_column_label]),
+            axis=1, result_type="expand").rename(columns=entities_hop_1_cols)
+        return entities_hop_1
 
 
-    def sample_triple_for_entity_by_count_as_list(triples_with_object_prob_df: pd.DataFrame, entity: str) -> List[str]:
+    def get_counts_for_entities(self, entity_series: pd.Series, entity_column_label: str, *,
+        count_label: str = 'count') -> pd.DataFrame:
+        """
+        Get the counts for the entities.
+
+        Parameters:
+        ----------
+        entity_series: pd.Series
+            The series of entities (entity labels)
+
+        entity_column_label: str
+            The entity column label to use in the returned dataframe
+
+        count_label: str
+            The count label to use in the returned dataframe
+
+        Returns:
+        ----------
+        counts_df: pd.DataFrame
+            The dataframe of entities and their counts
+        """
+        entity_labels = entity_series.tolist()
+        query = get_entity_count_from_label_multiple_query(entity_labels=entity_labels)
+        entity_counts = self.yago_db.query(query)
+        entity_counts_df = pd.DataFrame(entity_counts, columns=["entity_id", entity_column_label, count_label])
+        entity_counts_df = entity_series.to_frame(name=entity_column_label)\
+            .merge(entity_counts_df, left_on=entity_column_label, right_on=entity_column_label, how="left")
+        entity_counts_df[[count_label]].fillna(0, inplace=True)
+        return entity_counts_df[[entity_column_label, count_label]]
+
+    def sample_triple_for_entity_by_count(self, triples_with_object_prob_df: pd.DataFrame, entity: str) -> List[str]:
         """
         Samples triples for a given entity.
         Uses the count of the entities to weight the sampling.
@@ -104,3 +186,9 @@ class RandomWalk2:
         sampled_triple = matched_triples_df.sample(n=1, replace=False, weights=self.sparql_columns_dict["object_count"]).iloc[0]
         return [self.sampled_triple[sparql_columns_dict["predicate"]], 
             self.sampled_triple[sparql_columns_dict["object"]]]
+
+if __name__=='__main__':
+    yago_db = YagoDB(db_name=YAGO_ENTITY_STORE_DB_PATH)
+    random_walk = RandomWalk2(yago_db=yago_db)
+    entities_df = random_walk.random_walk(num_of_entities=5, depth=3)
+    print(entities_df)
