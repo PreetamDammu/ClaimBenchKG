@@ -46,6 +46,38 @@ def get_triples_multiple_subjects_query(*,
     """
     return query
 
+
+def get_description_multiple_entities_query(*,
+    entities: List[str] = [], columns_dict: dict = None) -> str:
+    """
+    Generate a query to get the description for a list of entities.
+
+    Parameters:
+    ----------
+    entities: List[str]
+        The list of entities to get the description for
+
+    columns_dict: dict
+        The columns dictionary
+
+    Returns:
+    ----------
+    query: str
+        The query to get the description for the entities
+    """
+    if columns_dict is None:
+        columns_dict = {}
+    subject = columns_dict["subject"] if "subject" in columns_dict else "subject"
+    description = columns_dict["description"] if "description" in columns_dict else "description"
+    query = f"""
+    SELECT ?{subject} ?{description} WHERE {{
+        VALUES ?{subject} {{ {" ".join(entities)} }}
+        ?{subject} <http://www.w3.org/2000/01/rdf-schema#comment> ?{description}
+    }}
+    """
+    return query
+
+
 def query_kg(yago_endpoint_url: str, query_sparql: str) -> List[str]:
     """Query the YAGO knowledge graph.
 
@@ -100,8 +132,10 @@ if __name__ == "__main__":
     yago_endpoint_url = "http://localhost:9999/bigdata/sparql"
     query = """
     PREFIX yago: <http://yago-knowledge.org/resource/>
-    SELECT * WHERE { <http://yago-knowledge.org/resource/Belgium> 
-    ?predicate ?object } 
+    SELECT * WHERE { 
+    yago:doctoralAdvisor ?predicate ?object 
+    filter(lang(?object) = 'en')
+    } 
     LIMIT 10000
     """
     response = query_kg(yago_endpoint_url, query)

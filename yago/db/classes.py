@@ -21,7 +21,7 @@ class Item:
 
 
 class Property:
-    def __init__(self, property_id: str, property_label: str):
+    def __init__(self, property_id: str, property_label: str, count: int = 0):
         """Instantiate the property.
 
         Args:
@@ -31,7 +31,7 @@ class Property:
         """
         self.property_id: str = property_id
         self.property_label: str = property_label
-        self.count: int = 0
+        self.count: int = count
 
     def __str__(self) -> str:
         return f'Property: {self.property_id}. {self.property_label} ({self.count})'

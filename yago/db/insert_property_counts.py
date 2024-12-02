@@ -62,7 +62,7 @@ def check_triple(entities: List[str]) -> bool:
         return False
     return True
 
-def insert_properties(properties: List[Tuple[str, str]], db: YagoDB) -> int:
+def insert_properties(properties: List[Tuple[str, str, int]], db: YagoDB) -> int:
     """
     Insert the properties into the database.
 
@@ -160,7 +160,7 @@ def read_ttl_file(ttl_path: str, db: YagoDB, batch_length: int) -> None:
             else:
                 properties_set[entities[1]] += 1
             
-            if count == batch_length:
+            if count % batch_length == 0:
                 # Insert properties
                 properties_list = list([property_, None, count]
                                     for (property_, count) in properties_set.items())

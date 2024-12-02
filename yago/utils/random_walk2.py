@@ -85,6 +85,35 @@ class RandomWalk2:
         """
         Random walks on the YAGO knowledge graph.
         This algorithm weights the neighbouring entities based on the number of facts they are involved in.
+
+        Parameters:
+        ----------
+        num_of_entities: int
+            Number of entities to start the random walk with
+
+        depth: int
+            Depth of the random walk
+
+        Returns:
+        ----------
+        entities_df: pd.DataFrame
+            The dataframe of entities and their neighbors
+            Schema: entity0, predicate1, entity1, predicate2, entity2, ...
+        """
+        random_entities_query = get_random_entities_query(num_of_entities=num_of_entities)
+        entities = self.yago_db.query(random_entities_query)
+        entities_df = pd.DataFrame([f"{entity[1]}" for entity in entities], columns=["entity0"])
+
+        for i in range(depth - 1):
+            entities_single_hop = self.single_hop_batch(entities_df=entities_df, entity_column_label=f"entity{i}",)
+            entities_df[[f"predicate{i+1}", f"entity{i+1}"]] = entities_single_hop
+
+        return entities_df
+
+    def random_walk_description_batch(self, num_of_entities: int = 10, depth: int = 3) -> pd.DataFrame:
+        """
+        Random walks on the YAGO knowledge graph.
+        This algorithm weights the neighbouring entities based on the number of facts they are involved in.
         This algorithm also returns the description of the entities and predicates.
 
         Parameters:
