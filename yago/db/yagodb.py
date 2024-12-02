@@ -38,7 +38,8 @@ class YagoDB:
         self._curr.execute('''
             CREATE TABLE properties (
                 property_id TEXT PRIMARY KEY,
-                property_label TEXT
+                property_label TEXT,
+                count INTEGER DEFAULT 0
             )
         ''')
         self._curr.execute('''
@@ -138,6 +139,23 @@ class YagoDB:
         self._curr.executemany('''
             INSERT OR IGNORE INTO properties VALUES (?, ?)
         ''', [(property.property_id, property.property_label) for property in properties])
+        rows_inserted = self._curr.rowcount
+        self._conn.commit()
+        return rows_inserted
+
+    def insert_properties_with_counts(self, properties: List[Property]) -> int:
+        """
+        Insert multiple properties into the database.
+        Also updates the count of the properties.
+
+        Args:
+        - properties: List of `Property` to be inserted
+        """
+        self._curr.executemany('''
+            INSERT INTO properties (property_id, property_label, count) 
+                               VALUES (?, ?, ?)
+                               ON CONFLICT(property_id) DO UPDATE SET count = count + ?
+        ''', [(property_.property_id, property_.property_label, property_.count, property_.count) for property_ in properties])
         rows_inserted = self._curr.rowcount
         self._conn.commit()
         return rows_inserted
