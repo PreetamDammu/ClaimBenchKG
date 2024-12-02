@@ -114,21 +114,25 @@ def query_kg(yago_endpoint_url: str, query_sparql: str) -> List[str]:
         return None
 
 def get_triples_from_response(response: dict, *,
-    sparql_columns_dict: dict = None) -> pd.DataFrame:
+    columns_dict: dict = None) -> pd.DataFrame:
     """
     Extracts triples from the response of a SPARQL query.
     """
-    if sparql_columns_dict is None:
-        sparql_columns_dict = {
+    if columns_dict is None:
+        columns_dict = {
             "subject": "subject",
             "predicate": "predicate",
             "object": "object"
         }
     triples = []
+
+    if "results" not in response or "bindings" not in response["results"]:
+        return pd.DataFrame(triples)
+
     for row in response["results"]["bindings"]:
         triple = {}
         for key, value in row.items():
-            triple[sparql_columns_dict[key]] = value["value"]
+            triple[columns_dict[key]] = value["value"]
         triples.append(triple)
     return pd.DataFrame(triples)
 
