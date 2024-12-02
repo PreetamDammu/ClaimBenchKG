@@ -24,10 +24,14 @@ def main(args):
     # res = create_db(connection)
     # query = "select count(item_id) from items;"
     # query = "select * from items limit 10;"
-    query = "select * from items order by count desc limit 10;"
+    # query = "select * from items order by count desc limit 10;"
     # query = """select type, name, tbl_name, sql
     #     FROM sqlite_master
     #     WHERE type='index'"""
+
+    # query = "alter table properties add column count INTEGER DEFAULT 0;"
+    # query = "PRAGMA table_info([properties]);"
+
     res = query_db(connection, query)
     print(res)
 

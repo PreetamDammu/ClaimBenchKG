@@ -49,12 +49,18 @@ def get_triples_multiple_subjects_query(*,
 def query_kg(yago_endpoint_url: str, query_sparql: str) -> List[str]:
     """Query the YAGO knowledge graph.
 
-    Args:
-    - yago_endpoint_url: The YAGO endpoint URL
-    - query_sparql: The SPARQL query
+    Parameters:
+    ----------
+    yago_endpoint_url: str
+        The YAGO endpoint URL
+
+    query_sparql: str
+        The SPARQL query
 
     Returns:
-    - The response
+    ----------
+    response: List[str]
+        The response
     """
     headers = {
         "Content-Type": "application/sparql-query",
@@ -91,9 +97,17 @@ def get_triples_from_response(response: dict, *,
 
 if __name__ == "__main__":
     # Test the functions
-    yago_endpoint_url = "http://yago-knowledge.org/sparql"
-    # query = get_triples_multiple_subjects_query(entities=["<http://yago-knowledge.org/resource/Barack_Obama>"], 
-    #     columns_dict={"subject": "s", "predicate": "p", "object": "o"})
-    # response = query_kg(yago_endpoint_url, query)
-    # triples = get_triples_from_response(response)
-    print(yago_endpoint_url)
+    yago_endpoint_url = "http://localhost:9999/bigdata/sparql"
+    query = """
+    PREFIX yago: <http://yago-knowledge.org/resource/>
+    SELECT * WHERE { <http://yago-knowledge.org/resource/Belgium> 
+    ?predicate ?object } 
+    LIMIT 10000
+    """
+    response = query_kg(yago_endpoint_url, query)
+    triples_df = get_triples_from_response(response)
+    print(type(response))
+    print(triples_df.head())
+    print(triples_df.shape)
+    with open("triples.csv", "w") as f:
+        triples_df.to_csv(f, index=False)

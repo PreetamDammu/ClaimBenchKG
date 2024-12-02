@@ -27,12 +27,14 @@ class Property:
         Args:
         - property_id: ID of the property
         - property_label: label/alias of the property
+        - count: count of the property
         """
         self.property_id: str = property_id
         self.property_label: str = property_label
+        self.count: int = 0
 
     def __str__(self) -> str:
-        return f'Property: {self.property_id}. {self.property_label}'
+        return f'Property: {self.property_id}. {self.property_label} ({self.count})'
 
 
 class Claim:
