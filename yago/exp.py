@@ -28,12 +28,14 @@ def main(args):
     # query = """select type, name, tbl_name, sql
     #     FROM sqlite_master
     #     WHERE type='index'"""
-
     # query = "alter table properties add column count INTEGER DEFAULT 0;"
     # query = "PRAGMA table_info([properties]);"
+    query = "select * from properties"
 
     res = query_db(connection, query)
-    print(res)
+    with open("output.txt", "w") as f:
+        for r in res:
+            f.write(str(r) + "\n")
 
 
 if __name__ == "__main__":
