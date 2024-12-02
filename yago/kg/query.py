@@ -11,8 +11,8 @@ import pandas as pd
 # Functions
 
 # SparQL functions
-def get_triples_multiple_subjects_query(*,
-    entities: List[str] = [], filter_literals: bool = True,
+def get_triples_multiple_subjects_query(entities: List[str] = None, *,
+    filter_literals: bool = True,
     columns_dict: dict) -> str:
     """
     Generate a query to get the triples for a list of entities.
@@ -32,6 +32,8 @@ def get_triples_multiple_subjects_query(*,
     query: str
         The query to get the triples for the entities
     """
+    if entities is None:
+        entities = []
     if columns_dict is None:
         columns_dict = {}
     subject = columns_dict["subject"] if "subject" in columns_dict else "subject"
@@ -47,8 +49,8 @@ def get_triples_multiple_subjects_query(*,
     return query
 
 
-def get_description_multiple_entities_query(*,
-    entities: List[str] = [], columns_dict: dict = None) -> str:
+def get_description_multiple_entities_query(entities: List[str] = None, *,
+    columns_dict: dict = None) -> str:
     """
     Generate a query to get the description for a list of entities.
 
@@ -65,6 +67,8 @@ def get_description_multiple_entities_query(*,
     query: str
         The query to get the description for the entities
     """
+    if entities is None:
+        entities = []
     if columns_dict is None:
         columns_dict = {}
     subject = columns_dict["subject"] if "subject" in columns_dict else "subject"
@@ -73,6 +77,7 @@ def get_description_multiple_entities_query(*,
     SELECT ?{subject} ?{description} WHERE {{
         VALUES ?{subject} {{ {" ".join(entities)} }}
         ?{subject} <http://www.w3.org/2000/01/rdf-schema#comment> ?{description}
+        filter(lang(?{description}) = 'en')
     }}
     """
     return query
