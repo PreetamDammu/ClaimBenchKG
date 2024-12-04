@@ -177,9 +177,13 @@ class RandomWalk2:
         
         # First, get the triples for the entities
         entities = [f"<{entity}>" for entity in entity_df[entity_column_label].tolist() if entity is not None]
+        columns_dict = {
+            key: value for key, value in self.sparql_columns_dict.items() 
+            if key in ["subject", "predicate", "object"]
+        }
         query2 = get_triples_multiple_subjects_query(
             entities=entities, 
-            columns_dict=self.sparql_columns_dict,
+            columns_dict=columns_dict,
             filter_literals=False
         )
         response = query_kg(self.yago_endpoint_url, query2)
@@ -187,7 +191,7 @@ class RandomWalk2:
 
         # Get the counts for the objects
         triples_object_counts = self.get_counts_for_entities(entity_df=triples,
-            entity_column_label=self.sparql_columns_dict["object"], 
+            entity_column_label=columns_dict, 
             count_label=self.sparql_columns_dict["object_count"])
         ## The counts returned by get_counts_for_entities align with the triples
         triples[self.sparql_columns_dict["object_count"]] = \
@@ -291,24 +295,28 @@ class RandomWalk2:
         entity_series = entity_df[entity_column_label]
         entities = [f"<{entity}>" for entity in entity_series.tolist() if entity is not None]
 
+        columns_dict = {
+            key: value for key, value in self.sparql_columns_dict.items() 
+            if key in ["subject", "description"]
+        }
         query = get_description_multiple_entities_query(
             entities=entities, 
-            columns_dict=self.sparql_columns_dict
+            columns_dict=columns_dict
         )
         response = query_kg(self.yago_endpoint_url, query)
         entity_description_df = get_triples_from_response(
             response=response,
-            columns_dict=self.sparql_columns_dict
+            columns_dict=columns_dict
         )
 
         # Get only the first description for each entity
-        entity_description_df = entity_description_df.groupby(self.sparql_columns_dict["subject"]).first().reset_index()
+        entity_description_df = entity_description_df.groupby(columns_dict["subject"]).first().reset_index()
 
         entity_description_df = entity_series.to_frame(name=entity_column_label)\
-            .merge(entity_description_df, left_on=entity_column_label, right_on=self.sparql_columns_dict["subject"], 
+            .merge(entity_description_df, left_on=entity_column_label, right_on=columns_dict["subject"], 
             how="left")\
-            .drop(columns=[self.sparql_columns_dict["subject"]])\
-            .rename(columns={self.sparql_columns_dict["description"]: description_label})
+            .drop(columns=[columns_dict["subject"]])\
+            .rename(columns={columns_dict["description"]: description_label})
         
         return entity_description_df[[entity_column_label, description_label]]
         
