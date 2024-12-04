@@ -126,15 +126,15 @@ def get_triples_from_response(response: dict, *,
         }
     triples = []
 
-    if "results" not in response or "bindings" not in response["results"]:
+    try:
+        for row in response["results"]["bindings"]:
+            triple = {}
+            for key, value in row.items():
+                triple[columns_dict[key]] = value["value"]
+            triples.append(triple)
         return pd.DataFrame(triples)
-
-    for row in response["results"]["bindings"]:
-        triple = {}
-        for key, value in row.items():
-            triple[columns_dict[key]] = value["value"]
-        triples.append(triple)
-    return pd.DataFrame(triples)
+    except Exception as e:
+        return pd.DataFrame(triples, columns = columns_dict.values())
 
 if __name__ == "__main__":
     # Test the functions
