@@ -1,9 +1,9 @@
 ('yago:doctoralAdvisor', None, 30389)
 ('schema:lyricist', None, 40637)
 ('yago:director', None, 531)
-('schema:image', None, 4417230)
-('schema:mainEntityOfPage', None, 56934835)
-('schema:dateCreated', None, 8059325)
+('schema:image', None, 4417230) #must_ignore
+('schema:mainEntityOfPage', None, 56934835) #must_ignore
+('schema:dateCreated', None, 8059325) #must_ignore
 ('schema:worksFor', None, 1599538)
 ('schema:superEvent', None, 295692)
 ('yago:radialVelocity', None, 3729707)
@@ -40,7 +40,7 @@
 ('schema:award', None, 1303269)
 ('schema:startDate', None, 117270)
 ('yago:unemploymentRate', None, 196)
-('schema:isbn', None, 22538)
+('schema:isbn', None, 22538) #must_ignore?
 ('schema:postalCode', None, 565447)
 ('schema:endDate', None, 109074)
 ('yago:conferredBy', None, 9098)
@@ -57,7 +57,7 @@
 ('schema:inLanguage', None, 3499806)
 ('schema:birthPlace', None, 3127387)
 ('schema:gender', None, 8600962)
-('schema:url', None, 1653900)
+('schema:url', None, 1653900) #must_ignore
 ('schema:dissolutionDate', None, 144002)
 ('yago:leader', None, 34702)
 ('schema:performer', None, 24046)
@@ -72,14 +72,14 @@
 ('yago:academicDegree', None, 209364)
 ('schema:publisher', None, 51348)
 ('yago:beliefSystem', None, 233045)
-('rdfs:comment', None, 94679132) #7667860
+('rdfs:comment', None, 94679132) #7667860 #must_ignore
 ('schema:director', None, 311849)
 ('schema:organizer', None, 80408)
 ('schema:numberOfSeasons', None, 30657)
 ('yago:studentsCount', None, 70966)
 ('schema:affiliation', None, 57355)
 ('schema:sponsor', None, 60922)
-('schema:leiCode', None, 35918)
+('schema:leiCode', None, 35918) #must_ignore?
 ('schema:owns', None, 13810)
 ('yago:area', None, 643020)
 ('schema:contentLocation', None, 87611)
@@ -92,10 +92,10 @@
 ('yago:humanDevelopmentIndex', None, 169)
 ('schema:knowsLanguage', None, 2545269)
 ('yago:parallax', None, 3623787)
-('yago:length', None, 94259)
-('schema:gtin', None, 167)
+('yago:length', None, 94259) #must_ignore?
+('schema:gtin', None, 167) #must_ignore?
 ('schema:address', None, 43072)
-('schema:logo', None, 63498)
+('schema:logo', None, 63498) #must_ignore
 ('schema:recordLabel', None, 289)
 ('rdf:type', None, 52817258)
 ('yago:candidateIn', None, 145027)

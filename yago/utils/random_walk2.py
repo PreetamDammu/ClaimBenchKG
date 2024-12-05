@@ -25,7 +25,7 @@ if __name__=='__main__':
         from db.yagodb import YagoDB
         from db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
         from db.functions.entity import get_random_entities_query, \
-            get_entity_count_from_label_multiple_query_placeholder
+            get_entity_count_from_label_multiple_query_parameterized
         from kg.query import get_triples_multiple_subjects_query, get_description_multiple_entities_query, \
             query_kg, get_triples_from_response
         sys.path.insert(0, path.dirname( path.abspath(__file__) ) )
@@ -35,7 +35,7 @@ if __name__=='__main__':
         from ..db.yagodb import YagoDB
         from ..db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
         from ..db.functions.entity import get_random_entities_query, \
-            get_entity_count_from_label_multiple_query_placeholder
+            get_entity_count_from_label_multiple_query_parameterized
         from ..kg.query import get_triples_multiple_subjects_query, get_description_multiple_entities_query, \
             query_kg, get_triples_from_response
         from .constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
@@ -44,7 +44,7 @@ else:
     from db.yagodb import YagoDB
     from db.constants.main import YAGO_ALL_ENTITY_COUNT, YAGO_FACTS_ENTITY_COUNT
     from db.functions.entity import get_random_entities_query, \
-        get_entity_count_from_label_multiple_query_placeholder
+        get_entity_count_from_label_multiple_query_parameterized
     from kg.query import get_triples_multiple_subjects_query, get_description_multiple_entities_query, \
         query_kg, get_triples_from_response
     from utils.constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
@@ -135,18 +135,20 @@ class RandomWalk2:
             The dataframe of entities and their neighbors
             Schema: entity0, predicate1, entity1, predicate2, entity2, ...
         """
+        # First, randomly select the entities
         random_entities_query = get_random_entities_query(num_of_entities=num_of_entities)
         entities = self.yago_db.query(random_entities_query)
         entity_df = pd.DataFrame([f"{entity[1]}" for entity in entities], columns=["entity0"])
         # Add descriptions for the entities
-        entity_df["description0"] = self.get_descriptions_for_entities(entity_df=entity_df, 
+        entity_df["description0"] = self._get_descriptions_for_entities(entity_df=entity_df, 
             entity_column_label="entity0", description_label="description0")["description0"]
 
         for i in range(depth - 1):
+            # Get the entities for the next hop
             entities_single_hop = self.single_hop_batch(entity_df=entity_df, entity_column_label=f"entity{i}",)
             entity_df[[f"predicate{i+1}", f"entity{i+1}"]] = entities_single_hop
             # Add descriptions for the entities
-            entity_df[f"description{i+1}"] = self.get_descriptions_for_entities(entity_df=entity_df, 
+            entity_df[f"description{i+1}"] = self._get_descriptions_for_entities(entity_df=entity_df, 
                 entity_column_label=f"entity{i+1}", description_label=f"description{i+1}")[f"description{i+1}"]
 
         return entity_df
@@ -177,11 +179,11 @@ class RandomWalk2:
             entities_hop_1_cols = {0: "predicate1", 1: "entity1"}
         
         # First, get the triples for the entities
-        entities = self.get_entity_list(entity_list=entity_df[entity_column_label].tolist())
+        entities = self._get_valid_entity_list(entity_list=entity_df[entity_column_label].tolist())
         # [f"<{entity}>" for entity in entity_df[entity_column_label].tolist() if entity is not None]
         columns_dict = {
             key: value for key, value in self.sparql_columns_dict.items() 
-            if key in ["subject", "predicate", "object"]
+            if key in ["subject", "predicate", "object", "object_count"]
         }
         try:
             query2 = get_triples_multiple_subjects_query(
@@ -196,24 +198,24 @@ class RandomWalk2:
 
         # Get the counts for the objects
         try:
-            triples_object_counts = self.get_counts_for_entities(entity_df=triples,
+            triples_object_counts = self._get_counts_for_entities(entity_df=triples,
                 entity_column_label=columns_dict["object"], 
-                count_label=self.sparql_columns_dict["object_count"])
-            ## The counts returned by get_counts_for_entities align with the triples
-            triples[self.sparql_columns_dict["object_count"]] = \
-                triples_object_counts[self.sparql_columns_dict["object_count"]].values
+                count_label=columns_dict["object_count"])
+            ## The counts returned by _get_counts_for_entities align with the triples
+            triples[columns_dict["object_count"]] = \
+                triples_object_counts[columns_dict["object_count"]].values
         except Exception as e:
-            triples[self.sparql_columns_dict["object_count"]] = 0
+            triples[columns_dict["object_count"]] = 0
 
         # Finally, use the objects and their counts to get one entity each for the first hop
         entities_hop_1 = entity_df.apply(
-            lambda row: self.sample_triple_for_entity_by_count(triples_df=triples,
-                entity=row[entity_column_label], weight_column_label=self.sparql_columns_dict["object_count"]),
+            lambda row: self._sample_triple_for_entity_by_count(triples_df=triples, entity=row[entity_column_label], 
+                weight_column_label=columns_dict["object_count"]),
             axis=1, result_type="expand").rename(columns=entities_hop_1_cols)
         return entities_hop_1
 
 
-    def get_counts_for_entities(self, entity_df: pd.DataFrame, entity_column_label: str, *,
+    def _get_counts_for_entities(self, entity_df: pd.DataFrame, entity_column_label: str, *,
         count_label: str = 'count') -> pd.DataFrame:
         """
         Get the counts for the entities.
@@ -236,8 +238,11 @@ class RandomWalk2:
         """
         entity_series = entity_df[entity_column_label]
         entity_labels = entity_series.tolist()
-        query = get_entity_count_from_label_multiple_query_placeholder(entity_labels=entity_labels)
+
+        query = get_entity_count_from_label_multiple_query_parameterized(entity_labels=entity_labels)
+        # Need to utilize the cursor of YagoDB directly because the query is parameterized
         entity_counts = self.yago_db._curr.execute(query, entity_labels).fetchall()
+
         entity_counts_df = pd.DataFrame(entity_counts, columns=["entity_id", entity_column_label, count_label])
         entity_counts_df = entity_series.to_frame(name=entity_column_label)\
             .merge(entity_counts_df, left_on=entity_column_label, right_on=entity_column_label, how="left")
@@ -245,7 +250,7 @@ class RandomWalk2:
         entity_counts_df[count_label] = entity_counts_df[count_label].fillna(0)
         return entity_counts_df[[entity_column_label, count_label]]
 
-    def sample_triple_for_entity_by_count(self, triples_df: pd.DataFrame, entity: str, 
+    def _sample_triple_for_entity_by_count(self, triples_df: pd.DataFrame, entity: str, 
         weight_column_label: str = None) -> List[str]:
         """
         Samples triples for a given entity.
@@ -266,7 +271,7 @@ class RandomWalk2:
         """
         if entity is None:
             return [None, None]
-        
+
         matched_triples_columns = [self.sparql_columns_dict["predicate"], self.sparql_columns_dict["object"], 
             self.sparql_columns_dict["object_count"]]
         matched_triples_df = triples_df\
@@ -281,7 +286,7 @@ class RandomWalk2:
         return [sampled_triple[self.sparql_columns_dict["predicate"]], 
             sampled_triple[self.sparql_columns_dict["object"]]]
 
-    def get_descriptions_for_entities(self, entity_df: pd.DataFrame, entity_column_label: str, *,
+    def _get_descriptions_for_entities(self, entity_df: pd.DataFrame, entity_column_label: str, *,
         description_label: str = 'description') -> pd.DataFrame:
         """
         Add the English description of the entity.
@@ -301,7 +306,7 @@ class RandomWalk2:
             The dataframe of entities and their descriptions
         """
         entity_series = entity_df[entity_column_label]
-        entities = self.get_entity_list(entity_list=entity_series.tolist())
+        entities = self._get_valid_entity_list(entity_list=entity_series.tolist())
         #[f"<{entity}>" for entity in entity_series.tolist() if entity is not None]
         columns_dict = {
             key: value for key, value in self.sparql_columns_dict.items() 
@@ -332,9 +337,9 @@ class RandomWalk2:
         
         return entity_description_df[[entity_column_label, description_label]]
 
-    def get_entity_list(self, entity_list: List[str]) -> List[str]:
+    def _get_valid_entity_list(self, entity_list: List[str]) -> List[str]:
         """
-        Get the entity list.
+        Get the valid entities from the list.
         Filter out the entities that are not valid URLs.
 
         Parameters:
