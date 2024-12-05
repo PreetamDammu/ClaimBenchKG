@@ -42,7 +42,7 @@ def get_entity_count_multiple_query(entity_ids: List[str]) -> str:
     """
     return query
 
-def get_entity_count_from_label_multiple_query_placeholder(entity_labels: List[str]) -> str:
+def get_entity_count_from_label_multiple_query_parameterized(entity_labels: List[str]) -> str:
     """Generate a parameterized query to get the count of multiple entities from the YAGO knowledge graph.
     This query uses placeholders for the entity labels.
 
