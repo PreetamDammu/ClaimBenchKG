@@ -44,8 +44,10 @@ def get_triples_multiple_subjects_query(entities: List[str] = None, *,
         VALUES ?{subject} {{ {" ".join(entities)} }}
         ?{subject} ?{predicate} ?{_object}
         {   f"FILTER isIRI(?{_object})" if filter_literals else "" }
+        filter(lang(?{_object}) = 'en' {f" || isIRI(?{_object})" if filter_literals else ""})
     }}
     """
+    print(query)
     return query
 
 
@@ -104,13 +106,16 @@ def query_kg(yago_endpoint_url: str, query_sparql: str) -> List[str]:
         "Accept": "application/sparql-results+json",
     }
 
-    response = requests.post(yago_endpoint_url, headers=headers, data=query_sparql)
-    if response.status_code == 200:
-        response_json = response.json()  # Prints the JSON result
-        return response_json
-    else:
-        print(f"Error: {response.status_code}")
-        print(response.text)
+    try:
+        response = requests.post(yago_endpoint_url, headers=headers, data=query_sparql)
+        if response.status_code == 200:
+            response_json = response.json()  # Prints the JSON result
+            return response_json
+        else:
+            print(f"Error: {response.status_code}")
+            return None
+    except Exception as e:
+        print(f"Error querying the YAGO knowledge graph")
         return None
 
 def get_triples_from_response(response: dict, *,
@@ -126,15 +131,15 @@ def get_triples_from_response(response: dict, *,
         }
     triples = []
 
-    if "results" not in response or "bindings" not in response["results"]:
-        return pd.DataFrame(triples)
-
-    for row in response["results"]["bindings"]:
-        triple = {}
-        for key, value in row.items():
-            triple[columns_dict[key]] = value["value"]
-        triples.append(triple)
-    return pd.DataFrame(triples)
+    try:
+        for row in response["results"]["bindings"]:
+            triple = {}
+            for key, value in row.items():
+                triple[columns_dict[key]] = value["value"]
+            triples.append(triple)
+        return pd.DataFrame(triples, columns = columns_dict.values())
+    except Exception as e:
+        return pd.DataFrame(triples, columns = columns_dict.values())
 
 if __name__ == "__main__":
     # Test the functions
