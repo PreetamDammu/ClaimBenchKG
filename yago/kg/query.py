@@ -47,6 +47,7 @@ def get_triples_multiple_subjects_query(entities: List[str] = None, *,
         filter(lang(?{_object}) = 'en' {f" || isIRI(?{_object})" if filter_literals else ""})
     }}
     """
+    print(query)
     return query
 
 
