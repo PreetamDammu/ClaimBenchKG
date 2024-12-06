@@ -29,7 +29,8 @@ if __name__=='__main__':
         from kg.query import get_triples_multiple_subjects_query, get_description_multiple_entities_query, \
             query_kg, get_triples_from_response
         sys.path.insert(0, path.dirname( path.abspath(__file__) ) )
-        from constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
+        from constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL, \
+            PREFIXES, INVALID_PROPERTIES
         from prefix import get_prefixes, get_url_from_prefix_and_id
     else:
         from ..db.yagodb import YagoDB
@@ -38,7 +39,8 @@ if __name__=='__main__':
             get_entity_count_from_label_multiple_query_parameterized
         from ..kg.query import get_triples_multiple_subjects_query, get_description_multiple_entities_query, \
             query_kg, get_triples_from_response
-        from .constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
+        from .constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL, \
+            PREFIXES, INVALID_PROPERTIES
         from .prefix import get_prefixes, get_url_from_prefix_and_id
 else:
     from db.yagodb import YagoDB
@@ -47,7 +49,8 @@ else:
         get_entity_count_from_label_multiple_query_parameterized
     from kg.query import get_triples_multiple_subjects_query, get_description_multiple_entities_query, \
         query_kg, get_triples_from_response
-    from utils.constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL
+    from utils.constants import YAGO_ENTITY_STORE_DB_PATH, YAGO_PREFIXES_PATH, YAGO_ENDPOINT_URL, \
+        PREFIXES, INVALID_PROPERTIES
     from utils.prefix import get_prefixes, get_url_from_prefix_and_id
 
 SPARQL_COLUMNS_DICT = {
@@ -189,11 +192,14 @@ class RandomWalk2:
             query2 = get_triples_multiple_subjects_query(
                 entities=entities, 
                 columns_dict=columns_dict,
+                prefixes=PREFIXES,
+                invalid_properties=INVALID_PROPERTIES,
                 filter_literals=False
             )
             response = query_kg(self.yago_endpoint_url, query2)
             triples = get_triples_from_response(response)
         except Exception as e:
+            print(f"Single hop query failed for: {entity_column_label}", e)
             triples = pd.DataFrame(columns=columns_dict.values())
 
         # Get the counts for the objects
@@ -205,6 +211,7 @@ class RandomWalk2:
             triples[columns_dict["object_count"]] = \
                 triples_object_counts[columns_dict["object_count"]].values
         except Exception as e:
+            print(f"Single hop object counts failed for: {entity_column_label}", e)
             triples[columns_dict["object_count"]] = 0
 
         # Finally, use the objects and their counts to get one entity each for the first hop
@@ -324,6 +331,7 @@ class RandomWalk2:
                 columns_dict=columns_dict
             )
         except Exception as e:
+            print(f"Description query failed for: {entity_column_label}", e)
             entity_description_df = pd.DataFrame(columns=columns_dict.values())
 
         # Get only the first description for each entity

@@ -9,12 +9,12 @@
 ('yago:radialVelocity', None, 3729707)
 ('schema:alternateName', None, 11687128)
 ('yago:parentBody', None, 10163)
-('schema:iataCode', None, 2729)
+('schema:iataCode', None, 2729) #must_ignore
 ('schema:founder', None, 48849)
 ('schema:spouse', None, 748093)
 ('schema:author', None, 3932471)
 ('schema:numberOfEmployees', None, 43381)
-('yago:iswcCode', None, 7509)
+('yago:iswcCode', None, 7509) #must_ignore
 ('schema:actor', None, 1336197)
 ('yago:populationNumber', None, 787313)
 ('schema:slogan', None, 282)
@@ -22,7 +22,7 @@
 ('schema:nationality', None, 3345406)
 ('yago:terminus', None, 32904)
 ('schema:alumniOf', None, 2421383)
-('owl:sameAs', None, 49625390)
+('owl:sameAs', None, 49625390) #must_ignore
 ('yago:highestPoint', None, 5385)
 ('yago:playsIn', None, 153644)
 ('schema:memberOf', None, 2403017)
@@ -39,12 +39,12 @@
 ('schema:material', None, 1331078)
 ('schema:award', None, 1303269)
 ('schema:startDate', None, 117270)
-('yago:unemploymentRate', None, 196)
-('schema:isbn', None, 22538) #must_ignore?
-('schema:postalCode', None, 565447)
+('yago:unemploymentRate', None, 196) #must_ignore
+('schema:isbn', None, 22538) #must_ignore
+('schema:postalCode', None, 565447) #must_ignore
 ('schema:endDate', None, 109074)
 ('yago:conferredBy', None, 9098)
-('schema:icaoCode', None, 3350)
+('schema:icaoCode', None, 3350) #must_ignore?
 ('yago:studentOf', None, 3488)
 ('yago:replaces', None, 54850)
 ('yago:lowestPoint', None, 422)
@@ -89,7 +89,7 @@
 ('yago:capital', None, 40334)
 ('yago:appearsIn', None, 136053)
 ('schema:sameAs', None, 11567698)
-('yago:humanDevelopmentIndex', None, 169)
+('yago:humanDevelopmentIndex', None, 169) #must_ignore
 ('schema:knowsLanguage', None, 2545269)
 ('yago:parallax', None, 3623787)
 ('yago:length', None, 94259) #must_ignore?
@@ -105,3 +105,4 @@
 ('schema:about', None, 2925998)
 ('yago:notableWork', None, 74321)
 ('schema:children', None, 1621678)
+('schema:geo', None, None) #must_ignore
