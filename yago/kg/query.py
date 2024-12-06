@@ -59,7 +59,6 @@ def get_triples_multiple_subjects_query(entities: List[str] = None, *,
         {f"FILTER ({' && '.join(filters)})" if filters else ""}
     }}
     """
-    print(query)
     return query
 
 
