@@ -199,7 +199,7 @@ class RandomWalk2:
             response = query_kg(self.yago_endpoint_url, query2)
             triples = get_triples_from_response(response)
         except Exception as e:
-            print(e)
+            print(f"Single hop query failed for: {entity_column_label}", e)
             triples = pd.DataFrame(columns=columns_dict.values())
 
         # Get the counts for the objects
@@ -211,6 +211,7 @@ class RandomWalk2:
             triples[columns_dict["object_count"]] = \
                 triples_object_counts[columns_dict["object_count"]].values
         except Exception as e:
+            print(f"Single hop object counts failed for: {entity_column_label}")
             triples[columns_dict["object_count"]] = 0
 
         # Finally, use the objects and their counts to get one entity each for the first hop
