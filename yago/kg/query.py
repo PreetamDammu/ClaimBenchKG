@@ -12,7 +12,7 @@ import pandas as pd
 
 # SparQL functions
 def get_triples_multiple_subjects_query(entities: List[str] = None, *,
-    filter_literals: bool = True,
+    lang: str = None, filter_literals: bool = True, prefixes: dict, invalid_properties: List[str] = None,
     columns_dict: dict) -> str:
     """
     Generate a query to get the triples for a list of entities.
@@ -36,18 +36,29 @@ def get_triples_multiple_subjects_query(entities: List[str] = None, *,
         entities = []
     if columns_dict is None:
         columns_dict = {}
+    
+    prefixes = [f"PREFIX {key}: <{value}>" for key, value in prefixes.items()]
+
     subject = columns_dict["subject"] if "subject" in columns_dict else "subject"
     predicate = columns_dict["predicate"] if "predicate" in columns_dict else "predicate"
     _object = columns_dict["object"] if "object" in columns_dict else "object"
+
+    filters = []
+    if lang:
+        filters.append(f"lang(?{_object}) = '{lang}'")
+    if filter_literals:
+        filters.append(f"isIRI(?{_object})")
+    if invalid_properties:
+        filters.append(f"?{predicate} not in ({','.join(invalid_properties)})")
+    
     query = f"""
+    {"\n".join(prefixes)}
     SELECT ?{subject} ?{predicate} ?{_object} WHERE {{
         VALUES ?{subject} {{ {" ".join(entities)} }}
         ?{subject} ?{predicate} ?{_object}
-        {   f"FILTER isIRI(?{_object})" if filter_literals else "" }
-        filter(lang(?{_object}) = 'en' {f" || isIRI(?{_object})" if filter_literals else ""})
+        {f"FILTER ({' && '.join(filters)})" if filters else ""}
     }}
     """
-    print(query)
     return query
 
 
