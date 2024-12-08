@@ -38,6 +38,7 @@ def get_triples_multiple_subjects_query(entities: List[str] = None, *,
         columns_dict = {}
     
     prefixes = [f"PREFIX {key}: <{value}>" for key, value in prefixes.items()]
+    prefix_string = "\n".join(prefixes)
 
     subject = columns_dict["subject"] if "subject" in columns_dict else "subject"
     predicate = columns_dict["predicate"] if "predicate" in columns_dict else "predicate"
@@ -52,7 +53,7 @@ def get_triples_multiple_subjects_query(entities: List[str] = None, *,
         filters.append(f"?{predicate} not in ({','.join(invalid_properties)})")
     
     query = f"""
-    {"\n".join(prefixes)}
+    {prefix_string}
     SELECT ?{subject} ?{predicate} ?{_object} WHERE {{
         VALUES ?{subject} {{ {" ".join(entities)} }}
         ?{subject} ?{predicate} ?{_object}
