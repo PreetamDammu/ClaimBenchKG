@@ -139,9 +139,11 @@ class RandomWalk2:
             Schema: entity0, predicate1, entity1, predicate2, entity2, ...
         """
         # First, randomly select the entities
-        random_entities_query = get_random_entities_query(num_of_entities=num_of_entities)
-        entities = self.yago_db.query(random_entities_query)
-        entity_df = pd.DataFrame([f"{entity[1]}" for entity in entities], columns=["entity0"])
+        # random_entities_query = get_random_entities_query(num_of_entities=num_of_entities)
+        # entities = self.yago_db.query(random_entities_query)
+        # entity_df = pd.DataFrame([f"{entity[1]}" for entity in entities], columns=["entity0"])
+        
+        entity_df = pd.read_csv("/home/ec2-user/claimbenchkg/claimbench/yago/utils/walks.csv")
         # Add descriptions for the entities
         entity_df["description0"] = self._get_descriptions_for_entities(entity_df=entity_df, 
             entity_column_label="entity0", description_label="description0")["description0"]
@@ -198,6 +200,8 @@ class RandomWalk2:
             )
             response = query_kg(self.yago_endpoint_url, query2)
             triples = get_triples_from_response(response)
+            print(f"Length of triples for {entity_column_label}: ", type(triples), len(triples))
+            print(f"Length of entities with valid neighbors: ", len(triples[columns_dict["subject"]].unique()))
         except Exception as e:
             print(f"Single hop query failed for: {entity_column_label}", e)
             triples = pd.DataFrame(columns=columns_dict.values())
@@ -363,6 +367,7 @@ class RandomWalk2:
         
         url_validation_regex = r"^http[s]?://.*$"
         entity_list = [f"<{entity}>" for entity in entity_list if entity is not None and re.match(url_validation_regex, entity)]
+        print("Length of entity_list: ", len(entity_list))
         return entity_list
         
 
