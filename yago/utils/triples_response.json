@@ -1,0 +1,3464 @@
+{
+    "head": {
+        "vars": [
+            "subject",
+            "predicate",
+            "object"
+        ]
+    },
+    "results": {
+        "bindings": [
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gibbsite_generic_instance"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gibbsite"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gibbsite_generic_instance"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Generic instance"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/ICC_Women_u0027_s_T20_World_Cup_Qualifier"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/g/11b7ynzjyh"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/ICC_Women_u0027_s_T20_World_Cup_Qualifier"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Sports_competition"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/ICC_Women_u0027_s_T20_World_Cup_Qualifier"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "bn",
+                    "type": "literal",
+                    "value": "\u09ae\u09b9\u09bf\u09b2\u09be \u099f\u09bf\u09e8\u09e6 \u09ac\u09bf\u09b6\u09cd\u09ac\u0995\u09be\u09aa \u09ac\u09be\u099b\u09be\u0987\u09aa\u09b0\u09cd\u09ac"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/ICC_Women_u0027_s_T20_World_Cup_Qualifier"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "ICC Women's World Twenty20 Qualifier"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/ICC_Women_u0027_s_T20_World_Cup_Qualifier"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "hi",
+                    "type": "literal",
+                    "value": "\u0906\u0908\u0938\u0940\u0938\u0940 \u092e\u0939\u093f\u0932\u093e \u091f\u094d\u0935\u0947\u0902\u091f\u0940-20 \u0935\u093f\u0936\u094d\u0935 \u0915\u092a \u0915\u094d\u0935\u093e\u0932\u0940\u092b\u093e\u092f\u0930"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "INS Rana"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "fi",
+                    "type": "literal",
+                    "value": "INS Rana (D115)"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "ja",
+                    "type": "literal",
+                    "value": "\u30ec\u30a4\u30c0\u30fc"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/m/096kgp"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/manufacturer"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Cammell_Laird"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Destroyer"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "HMS Raider"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ga",
+                    "type": "literal",
+                    "value": "HMS Raider"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "fa",
+                    "type": "literal",
+                    "value": "\u0627\u0686\u200c\u0627\u0645\u200c\u0627\u0633 \u0631\u06cc\u062f\u0631 (\u0627\u0686\u200c\u06f1\u06f5)"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "fi",
+                    "type": "literal",
+                    "value": "HMS Raider (H15)"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ja",
+                    "type": "literal",
+                    "value": "\u65e7Raider"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "vi",
+                    "type": "literal",
+                    "value": "HMS Raider"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "zh",
+                    "type": "literal",
+                    "value": "\u4fb5\u5165\u8005\u53f7"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "zh-hans",
+                    "type": "literal",
+                    "value": "\u4fb5\u5165\u8005\u53f7"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/HMS_Raider__u0028_H15_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "zh-hant",
+                    "type": "literal",
+                    "value": "\u4fb5\u5165\u8005\u865f"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Thomas FitzGerald"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/birthDate"
+                },
+                "object": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "type": "literal",
+                    "value": "1974-01-12T00:00:00.000Z"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/deathDate"
+                },
+                "object": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "type": "literal",
+                    "value": "1997-05-09T00:00:00.000Z"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/gender"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Male_gender"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/knowsLanguage"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/English_language_generic_instance"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/m/04mc_2"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://schema.org/Person"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "fr",
+                    "type": "literal",
+                    "value": "Thomas FitzGerald"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "sl",
+                    "type": "literal",
+                    "value": "Thomas FitzGerald"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ca",
+                    "type": "literal",
+                    "value": "Thomas FitzGerald"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Thomas FitzGerald, Earl of Offaly"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Thomas FitzGerald, Earl of Offaly"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "hu",
+                    "type": "literal",
+                    "value": "Thomas FitzGerald, Earl of Offaly"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Thomas_FitzGerald_u002C__Earl_of_Offaly"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "uk",
+                    "type": "literal",
+                    "value": "\u0422\u043e\u043c\u0430\u0441 \u0424\u0456\u0446\u0434\u0436\u0435\u0440\u0430\u043b\u044c\u0434, \u0433\u0440\u0430\u0444 \u041e\u0444\u0444\u0430\u043b\u0456"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Golden_Melody_Award_for_Best_Female_Mandarin_Singer"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Golden Melody Award for Best Mandarin Female Singer"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Golden_Melody_Award_for_Best_Female_Mandarin_Singer"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "zh",
+                    "type": "literal",
+                    "value": "\u91d1\u66f2\u734e\u6700\u4f73\u570b\u8a9e\u5973\u6b4c\u624b\u734e"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Golden_Melody_Award_for_Best_Female_Mandarin_Singer"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/m/011107_m"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Golden_Melody_Award_for_Best_Female_Mandarin_Singer"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Music_award"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Golden_Melody_Award_for_Best_Female_Mandarin_Singer"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "be-tarask",
+                    "type": "literal",
+                    "value": "\u201e\u0417\u0430\u043b\u0430\u0442\u0430\u044f \u043c\u044d\u043b\u0451\u0434\u044b\u044f \u201c \u0437\u0430 \u043d\u0430\u0439\u043b\u0435\u043f\u0448\u044b \u0436\u0430\u043d\u043e\u0447\u044b \u043c\u0430\u043d\u0434\u0430\u0440\u044b\u043d\u0441\u043a\u0456 \u0441\u044c\u043f\u0435\u045e"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Golden_Melody_Award_for_Best_Female_Mandarin_Singer"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "cy",
+                    "type": "literal",
+                    "value": "Gwobr y 'Golden Melody Award' am y Llais Benywaidd Mandarin Gorau"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Golden_Melody_Award_for_Best_Female_Mandarin_Singer"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Golden Melody Award for Best Female Mandarin Singer"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Golden_Melody_Award_for_Best_Female_Mandarin_Singer"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "sv",
+                    "type": "literal",
+                    "value": "Guldmelodipriset f\u00f6r b\u00e4sta kvinnliga mandarinska s\u00e5ngare"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Golden_Melody_Award_for_Best_Female_Mandarin_Singer"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "yue",
+                    "type": "literal",
+                    "value": "\u6700\u4f73\u570b\u8a9e\u5973\u6b4c\u624b\u734e"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Golden_Melody_Award_for_Best_Female_Mandarin_Singer"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "zh",
+                    "type": "literal",
+                    "value": "\u6700\u4f73\u570b\u8a9e\u5973\u6b4c\u624b\u734e"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Golden_Melody_Award_for_Best_Female_Mandarin_Singer"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "zh-hant",
+                    "type": "literal",
+                    "value": "\u6700\u4f73\u570b\u8a9e\u5973\u6b4c\u624b\u734e"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "de",
+                    "type": "literal",
+                    "value": "LGT World Men\u2019s Curling Championship 2021"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/endDate"
+                },
+                "object": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "type": "literal",
+                    "value": "2021-04-11T00:00:00.000Z"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/location"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Canada"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/location"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Calgary"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/g/11jpk9skf0"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/startDate"
+                },
+                "object": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "type": "literal",
+                    "value": "2021-04-02T00:00:00.000Z"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Canada"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/China"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Denmark"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Germany"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Italy"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Japan"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Netherlands"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/South_Korea"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Switzerland"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/United_States"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Sweden"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Scotland"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Season__u0028_sports_u0029_"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "da",
+                    "type": "literal",
+                    "value": "VM i curling 2021 (m\u00e6nd)"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "de",
+                    "type": "literal",
+                    "value": "Curling-Weltmeisterschaft der Herren 2021"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "2021 World Men's Curling Championship"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Campeonato Mundial de Curling Masculino de 2021"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "fr",
+                    "type": "literal",
+                    "value": "Championnat du monde masculin de curling 2021"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ja",
+                    "type": "literal",
+                    "value": "2021\u5e74\u4e16\u754c\u7537\u5b50\u30ab\u30fc\u30ea\u30f3\u30b0\u9078\u624b\u6a29\u5927\u4f1a"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "nb",
+                    "type": "literal",
+                    "value": "VM i curling for menn 2021"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "nl",
+                    "type": "literal",
+                    "value": "Wereldkampioenschap curling mannen 2021"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "pl",
+                    "type": "literal",
+                    "value": "Mistrzostwa \u015awiata M\u0119\u017cczyzn w Curlingu 2021"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ru",
+                    "type": "literal",
+                    "value": "\u0427\u0435\u043c\u043f\u0438\u043e\u043d\u0430\u0442 \u043c\u0438\u0440\u0430 \u043f\u043e \u043a\u0451\u0440\u043b\u0438\u043d\u0433\u0443 \u0441\u0440\u0435\u0434\u0438 \u043c\u0443\u0436\u0447\u0438\u043d 2021"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "sv",
+                    "type": "literal",
+                    "value": "V\u00e4rldsm\u00e4sterskapet i curling f\u00f6r herrar 2021"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/2021_World_Men_u0027_s_Curling_Championship"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "zh",
+                    "type": "literal",
+                    "value": "2021\u5e74\u7537\u5b50\u51b0\u58f6\u4e16\u9526\u8d5b"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Hosokura_Mine_Park_Mae_Station"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "ja",
+                    "type": "literal",
+                    "value": "\u7d30\u5009\u30de\u30a4\u30f3\u30d1\u30fc\u30af\u99c5"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Hosokura_Mine_Park_Mae_Station"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "ja",
+                    "type": "literal",
+                    "value": "\u7d30\u5009\u99c5"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Hosokura_Mine_Park_Mae_Station"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/location"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Japan"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Hosokura_Mine_Park_Mae_Station"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/m/0d56d2"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Hosokura_Mine_Park_Mae_Station"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Former_Railway_Station_Q4663385"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Hosokura_Mine_Park_Mae_Station"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Hosokura Mine Park Mae Station"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Hosokura_Mine_Park_Mae_Station"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ja",
+                    "type": "literal",
+                    "value": "\u7d30\u5009\u30de\u30a4\u30f3\u30d1\u30fc\u30af\u524d\u99c5"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Hosokura_Mine_Park_Mae_Station"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "my",
+                    "type": "literal",
+                    "value": "\u101f\u102d\u102f\u1006\u102d\u102f\u1001\u102f\u101b\u1019\u102d\u102f\u1004\u103a\u1038\u1015\u1000\u103a\u1001\u102f\u1019\u1021\u1032\u1018\u1030\u1010\u102c"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Hosokura_Mine_Park_Mae_Station"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "zh",
+                    "type": "literal",
+                    "value": "\u7d30\u5009\u7926\u5834\u516c\u5712\u7ad9"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Hosokura_Mine_Park_Mae_Station"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "zh-hans",
+                    "type": "literal",
+                    "value": "\u7ec6\u4ed3\u77ff\u5c71\u516c\u56ed\u524d\u8f66\u7ad9"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Shirpy"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/location"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Russia"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Shirpy"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/g/11b7qt4fhp"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Shirpy"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/populationNumber"
+                },
+                "object": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                    "type": "literal",
+                    "value": "4"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Shirpy"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Hamlet__u0028_place_u0029_"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Shirpy"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ce",
+                    "type": "literal",
+                    "value": "\u0428\u0438\u0440\u043f\u044b"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Shirpy"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Shirpy"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Shirpy"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "nan",
+                    "type": "literal",
+                    "value": "Shirpy"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Shirpy"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ru",
+                    "type": "literal",
+                    "value": "\u0428\u0438\u0440\u043f\u044b"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Shirpy"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "uz",
+                    "type": "literal",
+                    "value": "Shirpy"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Nsem"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/location"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Cameroon"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Nsem"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/location"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Haute-Sanaga"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Nsem"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/m/09k5zd4"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Nsem"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Communes_of_Cameroon"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Nsem"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "de",
+                    "type": "literal",
+                    "value": "Nsem"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Nsem"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Nsem"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Nsem"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Nsem"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Nsem"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "fr",
+                    "type": "literal",
+                    "value": "Nsem"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Nsem"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "it",
+                    "type": "literal",
+                    "value": "Nsem"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Nsem"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ms",
+                    "type": "literal",
+                    "value": "Nsem"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Nsem"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "nan",
+                    "type": "literal",
+                    "value": "Nsem"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Nsem"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "nl",
+                    "type": "literal",
+                    "value": "Nsem"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Bangladeshi_cricket_team_in_Pakistan_in_2003"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/endDate"
+                },
+                "object": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "type": "literal",
+                    "value": "2003-09-21T00:00:00.000Z"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Bangladeshi_cricket_team_in_Pakistan_in_2003"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/location"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Pakistan"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Bangladeshi_cricket_team_in_Pakistan_in_2003"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/m/0118yz2k"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Bangladeshi_cricket_team_in_Pakistan_in_2003"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/startDate"
+                },
+                "object": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "type": "literal",
+                    "value": "2003-08-20T00:00:00.000Z"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Bangladeshi_cricket_team_in_Pakistan_in_2003"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Pakistan_national_cricket_team"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Bangladeshi_cricket_team_in_Pakistan_in_2003"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/participant"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Bangladesh_national_cricket_team"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Bangladeshi_cricket_team_in_Pakistan_in_2003"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Sports_Tour_Q50846468"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Bangladeshi_cricket_team_in_Pakistan_in_2003"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "de",
+                    "type": "literal",
+                    "value": "Bangladeschische Cricket-Nationalmannschaft in Pakistan in der Saison 2003"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Bangladeshi_cricket_team_in_Pakistan_in_2003"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Bangladesh cricket team in Pakistan in 2003"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Bangladeshi_cricket_team_in_Pakistan_in_2003"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "mr",
+                    "type": "literal",
+                    "value": "\u092c\u093e\u0902\u0917\u0932\u093e\u0926\u0947\u0936 \u0915\u094d\u0930\u093f\u0915\u0947\u091f \u0938\u0902\u0918\u093e\u091a\u093e \u092a\u093e\u0915\u093f\u0938\u094d\u0924\u093e\u0928 \u0926\u094c\u0930\u093e, \u0968\u0966\u0966\u0969"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Carrier_Canal"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/location"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/United_States"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Carrier_Canal"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/location"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/California"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Carrier_Canal"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/m/0hnczqs"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Carrier_Canal"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Zanja"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Carrier_Canal"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Carrier Canal"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/location"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Aberdeenshire"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/m/072js1"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/populationNumber"
+                },
+                "object": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#decimal",
+                    "type": "literal",
+                    "value": "590"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Village"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ceb",
+                    "type": "literal",
+                    "value": "Gardenstown"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "cy",
+                    "type": "literal",
+                    "value": "Gardenstown"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "de",
+                    "type": "literal",
+                    "value": "Gardenstown"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Gardenstown"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Gardenstown"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "eu",
+                    "type": "literal",
+                    "value": "Gardenstown"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "fa",
+                    "type": "literal",
+                    "value": "\u06af\u0627\u0631\u062f\u0646\u0632\u062a\u0627\u0648\u0646"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "fr",
+                    "type": "literal",
+                    "value": "Gardenstown"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ga",
+                    "type": "literal",
+                    "value": "Gardenstown"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "gd",
+                    "type": "literal",
+                    "value": "Gardenstown"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "it",
+                    "type": "literal",
+                    "value": "Gardenstown"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ja",
+                    "type": "literal",
+                    "value": "\u30ac\u30fc\u30c7\u30f3\u30ba\u30bf\u30a6\u30f3"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "nl",
+                    "type": "literal",
+                    "value": "Gardenstown"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "sco",
+                    "type": "literal",
+                    "value": "Gamrie"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Gardenstown"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "sv",
+                    "type": "literal",
+                    "value": "Gardenstown"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/The_Time_of_Their_Lives__u0028_2017_film_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/actor"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Franco_Nero"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/The_Time_of_Their_Lives__u0028_2017_film_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/actor"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Michael_Brandon"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/The_Time_of_Their_Lives__u0028_2017_film_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/actor"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Joely_Richardson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/The_Time_of_Their_Lives__u0028_2017_film_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/actor"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Pauline_Collins"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/The_Time_of_Their_Lives__u0028_2017_film_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/actor"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Joan_Collins"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/The_Time_of_Their_Lives__u0028_2017_film_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Time of Their Lives"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/The_Time_of_Their_Lives__u0028_2017_film_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/musicBy"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Stephen_Warbeck"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/The_Time_of_Their_Lives__u0028_2017_film_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/g/11c5m2gqhy"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/The_Time_of_Their_Lives__u0028_2017_film_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "tt3415992"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/The_Time_of_Their_Lives__u0028_2017_film_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://schema.org/Movie"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/The_Time_of_Their_Lives__u0028_2017_film_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ast",
+                    "type": "literal",
+                    "value": "The Time of Their Lives"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/The_Time_of_Their_Lives__u0028_2017_film_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "The Time of Their Lives"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/parentTaxon"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/m/012snxc9"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://schema.org/Taxon"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "an",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ast",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "bg",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ca",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ceb",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "de",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "eo",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "eu",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ext",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "fi",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "fr",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ga",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "gl",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ia",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ie",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "io",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "it",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "la",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "nl",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "oc",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "pl",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "pt",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "pt-br",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ro",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ru",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "sq",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "sv",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "uk",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "vi",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "vo",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Euclidia_limbosa"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "war",
+                    "type": "literal",
+                    "value": "Euclidia limbosa"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Karen Linnea Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Karen Oldham"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "pl",
+                    "type": "literal",
+                    "value": "Karen Oldham"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alumniOf"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/University_of_Pennsylvania"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/birthDate"
+                },
+                "object": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "type": "literal",
+                    "value": "1938-04-05T00:00:00.000Z"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/birthPlace"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Denver"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/gender"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Female__u0028_gender_u0029_"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/nationality"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/United_States"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/g/11b76j0rjj"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Javelin_Thrower_Q18510502"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ar",
+                    "type": "literal",
+                    "value": "\u0643\u0627\u0631\u064a\u0646 \u0623\u0646\u062f\u0631\u0633\u0648\u0646"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ast",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "de",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "fr",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ga",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "it",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "nl",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ru",
+                    "type": "literal",
+                    "value": "\u041a\u0430\u0440\u0435\u043d \u0410\u043d\u0434\u0435\u0440\u0441\u043e\u043d"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "sl",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "fi",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "pl",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ca",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "da",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "nb",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "pt",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "pt-br",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Karen_Anderson__u0028_athlete_u0029_"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "sv",
+                    "type": "literal",
+                    "value": "Karen Anderson"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Naomichi_Uramoto"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/alternateName"
+                },
+                "object": {
+                    "xml:lang": "ja",
+                    "type": "literal",
+                    "value": "\u6d66\u672c \u4fee\u5145"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Naomichi_Uramoto"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/birthDate"
+                },
+                "object": {
+                    "datatype": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "type": "literal",
+                    "value": "1994-07-24T00:00:00.000Z"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Naomichi_Uramoto"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/gender"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Male_gender"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Naomichi_Uramoto"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/nationality"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Japan"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Naomichi_Uramoto"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/g/11c1pk2ym4"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Naomichi_Uramoto"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Motorcycle_Racer_Q3014296"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Naomichi_Uramoto"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ast",
+                    "type": "literal",
+                    "value": "Naomichi Uramoto"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Naomichi_Uramoto"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Naomichi Uramoto"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Naomichi_Uramoto"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Naomichi Uramoto"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Naomichi_Uramoto"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "it",
+                    "type": "literal",
+                    "value": "Naomichi Uramoto"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Naomichi_Uramoto"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "ja",
+                    "type": "literal",
+                    "value": "\u6d66\u672c\u4fee\u5145"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Naomichi_Uramoto"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "nl",
+                    "type": "literal",
+                    "value": "Naomichi Uramoto"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Lake_Sparrow"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://schema.org/sameAs"
+                },
+                "object": {
+                    "type": "literal",
+                    "value": "/g/11h0bq0crz"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Lake_Sparrow"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                },
+                "object": {
+                    "type": "uri",
+                    "value": "http://schema.org/BodyOfWater"
+                }
+            },
+            {
+                "subject": {
+                    "type": "uri",
+                    "value": "http://yago-knowledge.org/resource/Lake_Sparrow"
+                },
+                "predicate": {
+                    "type": "uri",
+                    "value": "http://www.w3.org/2000/01/rdf-schema#label"
+                },
+                "object": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Lake Sparrow"
+                }
+            }
+        ]
+    }
+}

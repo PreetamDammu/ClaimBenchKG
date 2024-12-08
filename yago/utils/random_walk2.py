@@ -12,6 +12,7 @@ import requests
 import argparse
 from typing import List, Set
 import re
+import json
 
 import numpy as np
 import pandas as pd
@@ -198,7 +199,12 @@ class RandomWalk2:
                 invalid_properties=INVALID_PROPERTIES,
                 filter_literals=False
             )
+            with open("/home/ec2-user/claimbenchkg/claimbench/yago/utils/triples_query.txt", "a") as f:
+                f.write(query2)
+                f.write("\n")
             response = query_kg(self.yago_endpoint_url, query2)
+            if entity_column_label == "entity0":
+                json.dump(response, open("/home/ec2-user/claimbenchkg/claimbench/yago/utils/triples_response.json", "w"))
             triples = get_triples_from_response(response)
             print(f"Length of triples for {entity_column_label}: ", type(triples), len(triples))
             print(f"Length of entities with valid neighbors: ", len(triples[columns_dict["subject"]].unique()))
