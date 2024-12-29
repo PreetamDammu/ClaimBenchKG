@@ -44,7 +44,7 @@ def get_interesting_entities(main_node_qid, entities):
     return yago_ids_list
 
 def filter_triples_by_predicates(triples, exclude_predicates):
-    print(f'Length of Triples = {len(triples)}')
+    # print(f'Length of Triples = {len(triples)}')
     processed_triples = []
     try:
         for i in range(len(triples)):
@@ -66,7 +66,7 @@ def filter_triples_by_predicates(triples, exclude_predicates):
                 processed_triples.append(triple)
     except Exception as e:
         print(e)
-    print(len(processed_triples))
+    # print(len(processed_triples))
     return processed_triples
 
 def plot_graph_with_simplified_labels(graph, title="Graph Visualization", figsize=(8, 8)):
@@ -157,9 +157,9 @@ def build_minimal_subgraph_Steiner(
     """
     # Step 1: Filter out invalid interesting nodes
     valid_interesting = [n for n in interesting_nodes if n in G]
-    print(f'Number of valid interesting nodes: {len(valid_interesting)}')
-    print(f'Number of interesting nodes: {len(interesting_nodes)}')
-    print(f'Removing nodes as they are not in the graph: {[n for n in interesting_nodes if n not in G]}')
+    # print(f'Number of valid interesting nodes: {len(valid_interesting)}')
+    # print(f'Number of interesting nodes: {len(interesting_nodes)}')
+    # print(f'Removing nodes as they are not in the graph: {[n for n in interesting_nodes if n not in G]}')
     if not valid_interesting:
         # No valid interesting nodes => Return empty subgraph
         return nx.DiGraph()
@@ -181,7 +181,7 @@ def build_minimal_subgraph_Steiner(
     for (u, v) in steiner_subgraph_und.edges():
         # print(f'u = {u}, v = {v}')
         if G.has_edge(u, v):
-            print(G[u][v])
+            # print(G[u][v])
             # Copy **all** attributes from the original graph edge
             # (including "predicate" if it exists)
             H.add_edge(u, v, **G[u][v])
