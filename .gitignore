@@ -8,3 +8,5 @@ inputs
 *.ntx
 
 yago/db/dump
+
+temp_output_compare_LLM.json
