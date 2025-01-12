@@ -1,0 +1,37 @@
+* [33mf56e006[m[33m ([m[1;31morigin/preetam_experiments[m[33m)[m updates
+* [33m2935852[m added readme
+[31m|[m * [33m05606de[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m added readme
+[31m|[m [32m|[m * [33m706ee49[m[33m ([m[1;36mHEAD -> [m[1;32mpreetam_experiments[m[33m)[m updates
+[31m|[m [32m|[m * [33m4d0259f[m updates
+[31m|[m [32m|[m[31m/[m  
+[31m|[m[31m/[m[32m|[m   
+* [32m|[m [33m6aa4807[m updates
+* [32m|[m [33m46ed646[m updates
+* [32m|[m [33ma24c0ff[m subgraph generation - Steiner
+[32m|[m[32m/[m  
+* [33m736d314[m updates
+*   [33m9ff973e[m Merge pull request #9 from PreetamDammu/scratch/invalid_properties
+[34m|[m[35m\[m  
+[34m|[m * [33m0eee41e[m f string fix
+* [35m|[m [33ma2f953e[m Merge pull request #8 from PreetamDammu/scratch/invalid_properties
+[36m|[m[35m\[m[35m|[m 
+[36m|[m * [33m9a20910[m Additional documentation
+[36m|[m * [33maecbf1c[m Add exception comments
+[36m|[m * [33m700e255[m Add additional properties to ignore
+[36m|[m * [33m62e1a5f[m Add properties filter
+[36m|[m[36m/[m  
+*   [33m89f51bb[m Merge pull request #7 from PreetamDammu/scratch/yago_doc
+[1;32m|[m[1;33m\[m  
+[1;32m|[m * [33mc5e8665[m Additional comments and code practice improvements
+[1;32m|[m * [33m4ae2999[m Add more error handling along with additional entity filtering
+[1;32m|[m * [33m2ae44a4[m Some error handling
+* [1;33m|[m [33m5af303d[m Merge pull request #6 from PreetamDammu/scratch/yago_doc
+[1;34m|[m[1;33m\[m[1;33m|[m 
+[1;34m|[m * [33m19e654e[m Modifications to query notebooks
+* [1;35m|[m [33m5bd75d2[m Merge pull request #5 from PreetamDammu/scratch/yago_doc
+[1;36m|[m[1;35m\[m[1;35m|[m 
+[1;36m|[m * [33m2d57888[m Complete first iteration of description based random walk
+[1;36m|[m * [33mc8fc101[m Complete function for description query
+[1;36m|[m * [33m62fe292[m Insert property counts, add logic for description query
+[1;36m|[m * [33ma79b24a[m Add count to properties with relevant insertion logic along with docstring updates
+[1;36m|[m[1;36m/[m  
