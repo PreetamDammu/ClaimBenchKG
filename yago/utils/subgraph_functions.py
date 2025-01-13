@@ -255,3 +255,128 @@ def edges_to_triples(G, relation_key='relation'):
 
     return triple_list
 
+def prune_triples(triples):
+    """
+    Given a list of triples, where each element is a list [subject, predicate, object]
+    containing URIs, return a new list of triples with each URI pruned to the part 
+    after its last '/'.
+    """
+    pruned_triples = []
+    for triple in triples:
+        pruned_triples.append([ part.split('/')[-1] for part in triple ])
+    return pruned_triples
+
+def restore_full_triples(pruned_subset, full_triples):
+    """
+    Given:
+      pruned_subset: A list of 'pruned' triples
+      full_triples:  A list of full triples
+    Returns:
+      A list of the corresponding full triples for each pruned triple in pruned_subset.
+      If a pruned triple is not found in the dictionary, this example returns None for that triple.
+    """
+
+    # 1. Build a lookup dict from pruned -> full
+    pruned_to_full = {}
+    for s_full, p_full, o_full in full_triples:
+        s_pruned = s_full.rsplit('/', 1)[-1]
+        p_pruned = p_full.rsplit('/', 1)[-1]
+        o_pruned = o_full.rsplit('/', 1)[-1]
+        pruned_to_full[(s_pruned, p_pruned, o_pruned)] = (s_full, p_full, o_full)
+
+    # 2. Restore the full triples for each pruned triple
+    restored = []
+    for s_pruned, p_pruned, o_pruned in pruned_subset:
+        key = (s_pruned, p_pruned, o_pruned)
+        if key in pruned_to_full:
+            restored.append(pruned_to_full[key])
+        else:
+            # Handle case when the pruned triple is not found in the dictionary
+            restored.append(None)
+    return restored
+
+def restore_full_triples_universal(pruned_subset, full_triples):
+    """
+    Given a pruned subset of triples and a full list of triples, both of which 
+    can be in one of two formats:
+    
+      1) List-based: e.g. [subject_uri, predicate_uri, object_uri]
+      2) Dict-based: e.g. {'subject': ..., 'predicate': ..., 'object': ...}
+    
+    This function returns a tuple of:
+      - A list of the restored full triples (in the same format as 'full_triples').
+      - A boolean flag (True/False) indicating if all conversions were successful.
+    
+    If a pruned triple is not found in the lookup dictionary, that element in the 
+    restored list is None.
+    """
+
+    # --------------------------------------------------------------------------
+    # 1) Detect the format of 'full_triples'
+    # --------------------------------------------------------------------------
+    if not full_triples:
+        raise ValueError("full_triples is empty. Cannot build a lookup dictionary.")
+    
+    full_is_dict_format = isinstance(full_triples[0], dict)
+    
+    # --------------------------------------------------------------------------
+    # 2) Helper functions
+    # --------------------------------------------------------------------------
+    def prune_value(uri):
+        """Return the substring after the last slash, or the entire string if no slash."""
+        return uri.rsplit('/', 1)[-1]
+
+    def get_spo(triple, is_dict):
+        """
+        Extract subject, predicate, object from the triple, 
+        depending on list or dict format.
+        """
+        if is_dict:
+            return triple["subject"], triple["predicate"], triple["object"]
+        else:
+            return triple[0], triple[1], triple[2]
+
+    def make_triple(s, p, o, is_dict):
+        """Reconstruct a triple in the given format (list or dict)."""
+        if is_dict:
+            return {"subject": s, "predicate": p, "object": o}
+        else:
+            return [s, p, o]
+
+    # --------------------------------------------------------------------------
+    # 3) Build a lookup dict: pruned (s, p, o) -> the full triple
+    # --------------------------------------------------------------------------
+    pruned_to_full = {}
+    for triple in full_triples:
+        s_full, p_full, o_full = get_spo(triple, full_is_dict_format)
+        # Build pruned version
+        s_pruned = prune_value(s_full)
+        p_pruned = prune_value(p_full)
+        o_pruned = prune_value(o_full)
+        pruned_to_full[(s_pruned, p_pruned, o_pruned)] = triple
+
+    # --------------------------------------------------------------------------
+    # 4) Detect format of 'pruned_subset'
+    #    (We'll restore them to the same format as 'full_triples'.)
+    # --------------------------------------------------------------------------
+    pruned_is_dict_format = False
+    if pruned_subset:
+        pruned_is_dict_format = isinstance(pruned_subset[0], dict)
+
+    # --------------------------------------------------------------------------
+    # 5) Restore the full triples from 'pruned_subset' 
+    #    by looking up the pruned (s, p, o) in pruned_to_full
+    # --------------------------------------------------------------------------
+    restored_result = []
+    for triple in pruned_subset:
+        s_p, p_p, o_p = get_spo(triple, pruned_is_dict_format)
+        found = pruned_to_full.get((s_p, p_p, o_p), None)
+        restored_result.append(found)
+
+    # --------------------------------------------------------------------------
+    # 6) Determine if *all* pruned triples were successfully converted
+    # --------------------------------------------------------------------------
+    all_converted = all(x is not None for x in restored_result)
+
+    # Return the restored list and the boolean flag
+    return restored_result, all_converted
