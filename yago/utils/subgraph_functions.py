@@ -266,36 +266,36 @@ def prune_triples(triples):
         pruned_triples.append([ part.split('/')[-1] for part in triple ])
     return pruned_triples
 
+# def restore_full_triples(pruned_subset, full_triples):
+#     """
+#     Given:
+#       pruned_subset: A list of 'pruned' triples
+#       full_triples:  A list of full triples
+#     Returns:
+#       A list of the corresponding full triples for each pruned triple in pruned_subset.
+#       If a pruned triple is not found in the dictionary, this example returns None for that triple.
+#     """
+
+#     # 1. Build a lookup dict from pruned -> full
+#     pruned_to_full = {}
+#     for s_full, p_full, o_full in full_triples:
+#         s_pruned = s_full.rsplit('/', 1)[-1]
+#         p_pruned = p_full.rsplit('/', 1)[-1]
+#         o_pruned = o_full.rsplit('/', 1)[-1]
+#         pruned_to_full[(s_pruned, p_pruned, o_pruned)] = (s_full, p_full, o_full)
+
+#     # 2. Restore the full triples for each pruned triple
+#     restored = []
+#     for s_pruned, p_pruned, o_pruned in pruned_subset:
+#         key = (s_pruned, p_pruned, o_pruned)
+#         if key in pruned_to_full:
+#             restored.append(pruned_to_full[key])
+#         else:
+#             # Handle case when the pruned triple is not found in the dictionary
+#             restored.append(None)
+#     return restored
+
 def restore_full_triples(pruned_subset, full_triples):
-    """
-    Given:
-      pruned_subset: A list of 'pruned' triples
-      full_triples:  A list of full triples
-    Returns:
-      A list of the corresponding full triples for each pruned triple in pruned_subset.
-      If a pruned triple is not found in the dictionary, this example returns None for that triple.
-    """
-
-    # 1. Build a lookup dict from pruned -> full
-    pruned_to_full = {}
-    for s_full, p_full, o_full in full_triples:
-        s_pruned = s_full.rsplit('/', 1)[-1]
-        p_pruned = p_full.rsplit('/', 1)[-1]
-        o_pruned = o_full.rsplit('/', 1)[-1]
-        pruned_to_full[(s_pruned, p_pruned, o_pruned)] = (s_full, p_full, o_full)
-
-    # 2. Restore the full triples for each pruned triple
-    restored = []
-    for s_pruned, p_pruned, o_pruned in pruned_subset:
-        key = (s_pruned, p_pruned, o_pruned)
-        if key in pruned_to_full:
-            restored.append(pruned_to_full[key])
-        else:
-            # Handle case when the pruned triple is not found in the dictionary
-            restored.append(None)
-    return restored
-
-def restore_full_triples_universal(pruned_subset, full_triples):
     """
     Given a pruned subset of triples and a full list of triples, both of which 
     can be in one of two formats:
@@ -380,3 +380,74 @@ def restore_full_triples_universal(pruned_subset, full_triples):
 
     # Return the restored list and the boolean flag
     return restored_result, all_converted
+
+
+# def get_full_uri(pruned_node, triples):
+#     """
+#     Finds the full URI of a node given its pruned form and a list of triples.
+
+#     Args:
+#         pruned_node (str): The pruned node name (last part of the URI).
+#         triples (list): A list of triples, where each triple is a list of the form [subject, predicate, object].
+
+#     Returns:
+#         str: The full URI of the node if found, otherwise None.
+#     """
+#     for triple in triples:
+#         for element in triple:
+#             if element.endswith('/' + pruned_node):
+#                 return element
+#     return None
+
+def encode_to_underscored_unicode(s: str) -> str:
+    """
+    Encodes a string so that:
+      1. Every space ' ' becomes an underscore '_'.
+      2. Every non-alphanumeric, non-underscore character c becomes `_uXXXX_`
+         where XXXX is the 4-digit uppercase hex code of that character.
+      3. Alphanumeric characters (letters/digits) and underscores remain as is.
+    """
+    result = []
+    for c in s:
+        if c == ' ':
+            # Convert spaces to underscores
+            result.append('_')
+        elif c.isalnum() or c == '_':
+            # Keep letters, digits, and underscores as is
+            result.append(c)
+        else:
+            # Convert everything else to _uXXXX_
+            result.append(f"_u{ord(c):04X}_")
+    return "".join(result)
+
+
+def get_full_uri(pruned_node, triples):
+    """
+    Finds the full URI of a node given its pruned form and a list of triples.
+    If a direct match is not found, it tries one more time after
+    encoding the node name using `encode_to_underscored_unicode`.
+
+    Args:
+        pruned_node (str): The pruned node name (last part of the URI).
+        triples (list): A list of triples, where each triple is a list of
+            the form [subject, predicate, object].
+
+    Returns:
+        str: The full URI of the node if found, otherwise None.
+    """
+    # First pass: try matching the pruned_node exactly
+    for triple in triples:
+        for element in triple:
+            if element.endswith('/' + pruned_node):
+                return element
+
+    # If not found, transform the node name and try again
+    transformed_node = encode_to_underscored_unicode(pruned_node)
+    if transformed_node != pruned_node:
+        for triple in triples:
+            for element in triple:
+                if element.endswith('/' + transformed_node):
+                    return element
+
+    # If still not found, give up
+    return None
