@@ -1,3 +1,29 @@
+def generate_question_evaluation_prompt_v2(question):
+    prompt = f"""As an expert evaluator, your role is to assess the quality and validity of trivia or natural questions. These questions aim to test the responder's knowledge, which may require implicit or external information. Your goal is to analyze the question based on the following criteria:
+
+- **Logical Structure**: Verify if the grammar and syntax are correct. (True if grammatically and syntactically correct; False if there are issues with grammar or syntax.)
+- **Redundancy**: Confirm that the question does not contain its own answer explicitly or through overly obvious phrasing. (True if it contains its answer; False if it does not.)
+- **Multiple Answers**: Determine if the question allows for multiple valid answers. This is acceptable in some cases, but flag it if it reduces the question's effectiveness or specificity. (True if multiple answers are plausible; False if only one valid answer is expected.)
+    
+#### Output JSON Keys:
+- `question`: The input question.
+- `logical_structure_flag`: (True/False)
+- `logical_structure_reasoning`: Reason for the logical structure flag.
+- `redundancy_flag`: (True/False)
+- `redundancy_reasoning`: Reason for the redundancy flag.
+- `multiple_answers_flag`: (True/False)
+- `multiple_answers_reasoning`: Reason for the multiple answers flag.
+
+#### Task:
+Analyze the following question and provide a JSON object containing flags and reasons for potential issues:
+
+**Question**: "{question}"
+
+#### Output:
+Return a JSON object that evaluates the question based on the criteria above.
+"""
+    return prompt
+
 def generate_question_evaluation_prompt(question):
     prompt = f"""As an expert evaluator, your role is to assess the quality and validity of trivia or natural questions. These questions aim to test the responder's knowledge, which may require implicit or external information. Your goal is to analyze the question based on the following criteria:
 
