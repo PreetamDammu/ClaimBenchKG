@@ -47,27 +47,6 @@ def build_anthropic_request_body(
 
     return request_body
 
-# def build_mistral_request_body(prompt: str, max_tokens: int = 2048, temperature: float = 0) -> dict:
-#     """
-#     Builds a minimal JSON payload for Mistral.
-
-#     :param prompt: The input text for the model.
-#     :param max_tokens: The maximum number of tokens to generate (default: 50).
-#     :param temperature: Sampling temperature for response variation (default: 0.7).
-#     :return: A dict representing the minimal request body.
-#     """
-#     request_body = {
-#         "modelId": "mistral.mistral-small-2402-v1:0",
-#         "contentType": "application/json",
-#         "accept": "application/json",
-#         "body": json.dumps({
-#             "prompt": f"<s>[INST] {prompt} [/INST]",
-#             "max_tokens": max_tokens, 
-#             "temperature": temperature
-#         })
-#     }
-#     return request_body
-
 def build_mistral_request_body(prompt: str, max_tokens: int = 2048, temperature: float = 0) -> dict:
     """
     Builds a minimal JSON payload for Mistral.
@@ -77,66 +56,95 @@ def build_mistral_request_body(prompt: str, max_tokens: int = 2048, temperature:
     :param temperature: Sampling temperature for response variation (default: 0.7).
     :return: A dict representing the minimal request body.
     """
-    request_body =json.dumps({
-            "prompt": prompt,
+    request_body = {
+        "modelId": "mistral.mistral-small-2402-v1:0",
+        "contentType": "application/json",
+        "accept": "application/json",
+        "body": json.dumps({
+            "prompt": f"<s>[INST] {prompt} [/INST]",
             "max_tokens": max_tokens, 
             "temperature": temperature
         })
+    }
     return request_body
 
-# def build_llama_request_body(
-#     prompt: str,
-#     max_tokens: int = 2048,
-#     temperature: float = 0
-# ) -> dict:
+# def build_mistral_request_body(prompt: str, max_tokens: int = 2048, temperature: float = 0) -> dict:
 #     """
-#     Builds a minimal JSON payload for Llama for single-prompt inference.
+#     Builds a minimal JSON payload for Mistral.
 
 #     :param prompt: The input text for the model.
-#     :param max_gen_len: The maximum number of tokens to generate in the response (default: 512).
-#     :param temperature: Sampling temperature for response variation (default: 0.5).
-#     :param top_p: Nucleus sampling parameter for response diversity (default: 0.9).
+#     :param max_tokens: The maximum number of tokens to generate (default: 50).
+#     :param temperature: Sampling temperature for response variation (default: 0.7).
 #     :return: A dict representing the minimal request body.
 #     """
-#     request_body = {
-#         "modelId": "us.meta.llama3-3-70b-instruct-v1:0",
-#         "contentType": "application/json",
-#         "accept": "application/json",
-#         "body": json.dumps({
+#     # request_body =json.dumps({
+#     #         "prompt": prompt,
+#     #         "max_tokens": max_tokens, 
+#     #         "temperature": temperature
+#     #     })
+#     prompt = f"<s>[INST] {prompt} [/INST]"
+#     request_body = json.dumps({
 #             "prompt": prompt,
-#             "max_gen_len": max_tokens,
-#             "temperature": temperature
+#             "max_tokens": max_tokens,
+#             "temperature": temperature,
+#             "top_p": 0.7,
+#             "top_k": 50
 #         })
-#     }
 #     return request_body
 
 def build_llama_request_body(
     prompt: str,
     max_tokens: int = 2048,
-    temperature: float = 0.5,
-    top_p: float = 0.9
+    temperature: float = 0
 ) -> dict:
     """
-    Builds the JSON payload for invoking the Llama model via Amazon Bedrock.
+    Builds a minimal JSON payload for Llama for single-prompt inference.
 
     :param prompt: The input text for the model.
-    :param max_tokens: The maximum number of tokens to generate in the response (default: 2048).
+    :param max_gen_len: The maximum number of tokens to generate in the response (default: 512).
     :param temperature: Sampling temperature for response variation (default: 0.5).
     :param top_p: Nucleus sampling parameter for response diversity (default: 0.9).
-    :return: A dict representing the request body.
+    :return: A dict representing the minimal request body.
     """
-    # Format the prompt according to Llama's instruction format
-    formatted_prompt = f"<|begin_of_text|><|start_header_id|>user<|end_header_id|> {prompt} <|eot_id|> <|start_header_id|>assistant<|end_header_id|>"
+    request_body = {
+        "modelId": "us.meta.llama3-2-3b-instruct-v1:0", #"us.meta.llama3-2-11b-instruct-v1:0", #"us.meta.llama3-3-70b-instruct-v1:0", 
+        "contentType": "application/json",
+        "accept": "application/json",
+        "body": json.dumps({
+            "prompt": prompt,
+            "max_gen_len": max_tokens,
+            "temperature": temperature
+        })
+    }
+    return request_body
 
-    # Construct the body with the required parameters
-    body = json.dumps({
-        "prompt": prompt,
-        "max_gen_len": max_tokens,
-        "temperature": temperature,
-        "top_p": top_p
-    })
+# def build_llama_request_body(
+#     prompt: str,
+#     max_tokens: int = 2048,
+#     temperature: float = 0.5,
+#     top_p: float = 0.9
+# ) -> dict:
+#     """
+#     Builds the JSON payload for invoking the Llama model via Amazon Bedrock.
 
-    return body
+#     :param prompt: The input text for the model.
+#     :param max_tokens: The maximum number of tokens to generate in the response (default: 2048).
+#     :param temperature: Sampling temperature for response variation (default: 0.5).
+#     :param top_p: Nucleus sampling parameter for response diversity (default: 0.9).
+#     :return: A dict representing the request body.
+#     """
+#     # Format the prompt according to Llama's instruction format
+#     formatted_prompt = f"<|begin_of_text|><|start_header_id|>user<|end_header_id|> {prompt} <|eot_id|><|start_header_id|>assistant<|end_header_id|>"
+
+#     # Construct the body with the required parameters
+#     body = json.dumps({
+#         "prompt": formatted_prompt,
+#         "max_gen_len": max_tokens,
+#         "temperature": temperature,
+#         "top_p": top_p
+#     })
+
+#     return body
 
 def build_command_r_request_body(
     prompt: str,
@@ -200,37 +208,37 @@ def build_nova_request_body(
     }
     return request_body
 
-def build_nova_request_body(
-    prompt: str,
-    max_tokens: int = 2048,
-    temperature: float = 0
-) -> dict:
-    """
-    Builds a minimal JSON payload for Amazon Nova for single-prompt inference.
+# def build_nova_request_body(
+#     prompt: str,
+#     max_tokens: int = 2048,
+#     temperature: float = 0
+# ) -> dict:
+#     """
+#     Builds a minimal JSON payload for Amazon Nova for single-prompt inference.
 
-    :param prompt: The input text for the model.
-    :param max_new_tokens: The maximum number of tokens to generate in the response (default: 1000).
-    :param temperature: Sampling temperature for response variation (default: 0.7).
-    :return: A dict representing the request body, with the 'body' serialized as a JSON string.
-    """
-    # Build the request body
-    request_body = json.dumps({  # Serialize the body as JSON string
-            "inferenceConfig": {
-                "max_new_tokens": max_tokens,
-                "temperature": temperature
-            },
-            "messages": [
-                {
-                    "role": "user",
-                    "content": [
-                        {
-                            "text": prompt
-                        }
-                    ]
-                }
-            ]
-        })
-    return request_body
+#     :param prompt: The input text for the model.
+#     :param max_new_tokens: The maximum number of tokens to generate in the response (default: 1000).
+#     :param temperature: Sampling temperature for response variation (default: 0.7).
+#     :return: A dict representing the request body, with the 'body' serialized as a JSON string.
+#     """
+#     # Build the request body
+#     request_body = json.dumps({  # Serialize the body as JSON string
+#             "inferenceConfig": {
+#                 "max_new_tokens": max_tokens,
+#                 "temperature": temperature
+#             },
+#             "messages": [
+#                 {
+#                     "role": "user",
+#                     "content": [
+#                         {
+#                             "text": prompt
+#                         }
+#                     ]
+#                 }
+#             ]
+#         })
+#     return request_body
 
 
 def invoke_bedrock_endpoint(
