@@ -6,6 +6,7 @@ This module contains utility functions for the Yago Knowledge Graph.
 from typing import List, Set
 import requests
 import pandas as pd
+import urllib.parse
 
 ############################################################################################################
 # Functions
@@ -128,6 +129,29 @@ def query_kg(yago_endpoint_url: str, query_sparql: str) -> List[str]:
             return None
     except Exception as e:
         print(f"Error querying the YAGO knowledge graph")
+        print(e)
+        return None
+    
+def query_kg_endpoint(yago_endpoint_url: str, query_sparql: str) -> List[str]:
+    headers = {
+        "Content-Type": "application/sparql-query; charset=utf-8",
+        "Accept": "application/sparql-results+json",
+    }
+
+    try:
+        # Encode query explicitly as UTF-8 bytes
+        response = requests.post(yago_endpoint_url, headers=headers, data=query_sparql.encode("utf-8"))
+
+        # Debugging: log the status code and response
+        # print(f"Response Status Code: {response.status_code}")
+        # print(f"Response Content: {response.text}")
+
+        if response.status_code == 200:
+            return response.json()
+        else:
+            return None
+    except Exception as e:
+        print(f"Error querying the YAGO knowledge graph: {e}")
         return None
 
 def get_triples_from_response(response: dict, *,
@@ -152,6 +176,44 @@ def get_triples_from_response(response: dict, *,
         return pd.DataFrame(triples, columns = columns_dict.values())
     except Exception as e:
         return pd.DataFrame(triples, columns = columns_dict.values())
+    
+    
+def query_yago_entity_as_list(yago_endpoint_url, yago_entity_id):
+    """
+    Query the YAGO knowledge graph for all triples connected to a given entity and return results as a list.
+
+    Parameters:
+        yago_endpoint_url (str): The SPARQL endpoint URL.
+        yago_entity_id (str): The YAGO entity ID (e.g., 'doctoralAdvisor').
+
+    Returns:
+        list: A list of triples (subject, predicate, object) connected to the entity.
+    """
+    # Construct the SPARQL query
+    query = f"""
+    PREFIX yago: <http://yago-knowledge.org/resource/>
+    SELECT ?subject ?predicate ?object WHERE {{ 
+        {{ yago:{yago_entity_id} ?predicate ?object . }}
+        UNION
+        {{ ?subject ?predicate yago:{yago_entity_id} . }}
+        FILTER(lang(?object) = 'en' || !isLiteral(?object))
+    }} 
+    LIMIT 10000
+    """
+    
+    # Query the knowledge graph using the provided function
+    response = query_kg(yago_endpoint_url, query)
+    print("Response was received")
+    
+    # Convert the response into a DataFrame
+    triples_df = get_triples_from_response(response)
+    print("Response was converted to DataFrame")
+    
+    # Convert the DataFrame into a list of triples
+    triples_list = triples_df.values.tolist()
+    print("DataFrame was converted to list")
+    
+    return triples_list
 
 if __name__ == "__main__":
     # Test the functions
@@ -159,7 +221,7 @@ if __name__ == "__main__":
     query = """
     PREFIX yago: <http://yago-knowledge.org/resource/>
     SELECT * WHERE { 
-    yago:doctoralAdvisor ?predicate ?object 
+    yago:Italy ?predicate ?object 
     filter(lang(?object) = 'en')
     } 
     LIMIT 10000
