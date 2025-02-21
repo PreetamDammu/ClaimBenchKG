@@ -7,6 +7,7 @@ from networkx.algorithms.approximation import steiner_tree
 from utils.kg_functions import load_json, extract_ids_with_prefix, convert_QID_yagoID
 from utils.kg_functions import combine_lists_from_dict, get_yago_direct_neighbors, sparql_to_triples_with_main_entity
 from utils.kg_functions import parallel_process_nodes, extract_ids_with_prefix, parallel_convert_QID_yagoID
+from utils.helper_functions import decode_underscored_unicode
 
 yago_endpoint_url = "http://localhost:9999/bigdata/sparql"
 
@@ -69,7 +70,7 @@ def filter_triples_by_predicates(triples, exclude_predicates):
     # print(len(processed_triples))
     return processed_triples
 
-def plot_graph_with_simplified_labels(graph, title="Graph Visualization", figsize=(8, 8)):
+def plot_graph_with_simplified_labels(graph, title="Graph Visualization", figsize=(8, 8), layout_type=None):
     """
     Plot a graph with node and edge labels simplified to text after the last '/'.
 
@@ -80,29 +81,43 @@ def plot_graph_with_simplified_labels(graph, title="Graph Visualization", figsiz
     # Determine layout dynamically based on graph size
     num_nodes = graph.number_of_nodes()
     num_edges = graph.number_of_edges()
+    
+    
 
-    if num_nodes < 10:
-        layout = nx.shell_layout(graph)  # Good for small graphs
-    elif num_edges > num_nodes * 2:
-        layout = nx.circular_layout(graph)  # For dense graphs
-    elif nx.is_tree(graph):
-        layout = nx.kamada_kawai_layout(graph)  # Tree-like structure
+    # Determine layout
+    if layout_type == "spring":
+        pos = nx.spring_layout(graph, seed=42)
+    elif layout_type == "shell":
+        pos = nx.shell_layout(graph)
+    elif layout_type == "circular":
+        pos = nx.circular_layout(graph)
+    elif layout_type == "kamada_kawai":
+        pos = nx.kamada_kawai_layout(graph)
+    elif layout_type == "spectral":
+        pos = nx.spectral_layout(graph)
     else:
-        layout = nx.spring_layout(graph, seed=42)  # General-purpose layout
+        if num_nodes < 10:
+            pos = nx.shell_layout(graph)
+        elif num_edges > num_nodes * 2:
+            pos = nx.circular_layout(graph)
+        elif nx.is_tree(graph):
+            pos = nx.kamada_kawai_layout(graph)
+        else:
+            pos = nx.spring_layout(graph, seed=42)
 
     plt.figure(figsize=figsize)
 
     # Simplify node labels
-    node_labels = {node: node.split('/')[-1] for node in graph.nodes()}
+    node_labels = {node: decode_underscored_unicode(node.split('/')[-1]) for node in graph.nodes()}
 
     # Simplify edge labels
     edge_labels = {
-        (u, v): data['relation'].split('/')[-1]
+        (u, v): decode_underscored_unicode(data['relation'].split('/')[-1])
         for u, v, data in graph.edges(data=True)
     }
 
     # Get node positions
-    pos = layout
+    pos = layout_type
 
     # Draw the graph with simplified labels
     nx.draw_networkx(

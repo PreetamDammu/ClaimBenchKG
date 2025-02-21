@@ -23,7 +23,7 @@ YAGO_PREFIXES_PATH = os.path.join(os.path.dirname(__file__), "db/yago-prefixes.t
 
 YAGO_ENDPOINT_URL = "http://localhost:9999/bigdata/sparql"
 
-def get_prefixes() -> str:
+def get_prefixes() -> dict:
     """Get the prefixes for the YAGO knowledge graph.
 
     Returns:
@@ -78,7 +78,7 @@ def query_triple(yago_endpoint_url: str, subject: str, *,
         {   "FILTER isIRI(?object)" if filter_literals else "" }
     }}
     """
-
+    
     response = requests.post(yago_endpoint_url, headers=headers, data=query)
     if response.status_code == 200:
         response_json = response.json()  # Prints the JSON result
@@ -111,7 +111,7 @@ def random_walk(self, depth: int = 3) -> List[str]:
             subject = f"{PREFIXES[subject_list[0]]}{subject_list[1]}"
         else:
             subject = f"{subject}"
-
+    
     walk = [subject]
     for _ in range(depth):
         triple = query_triple(YAGO_ENDPOINT_URL, f"<{walk[-1]}>")
